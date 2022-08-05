@@ -24,7 +24,10 @@
 
 ## Behavioral
 
-Most of the behavioral questions should be answered in the CAR format. At least three sentences for each question (one for cause, one for action and one for result). When answering begin with "At my last opportunity..." or "At my last company". Don't sell yourself out and say "bootcamp" or "school".
+Most of the behavioral questions should be answered in the CAR format. 
+At least three sentences for each question (one for cause, one for action and one for result). 
+When answering begin with "At my last opportunity..." or "At my last company". 
+Don't sell yourself out and say "bootcamp" or "school".
 
 ### CAR
 
@@ -39,10 +42,10 @@ Most of the behavioral questions should be answered in the CAR format. At least 
 
 ### Questions
 
-- [ ] Give me an example of a project or initiative that you started on your own. What prompted you to get started?
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+- [X] Give me an example of a project or initiative that you started on your own. What prompted you to get started?
+  - **Cause:** At my last oppportunity I wanted to understand object-oriented-programming.
+  - **Action:** I looked up documentation on the MDN to build a project.
+  - **Result:** I applied the OOP principles into this project.
 - [ ] Tell me about a time you had to work on several projects at once. How did you handle this?
   - **Cause:**
   - **Action:**
@@ -138,11 +141,11 @@ Most of the technical questions should have a three sentence response in the EUE
 
 ### HTML
 
-- [ ] What does a doctype do?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What does a doctype do?
+  - **Explanation:** Doctype ensures that the browser makes an attempt at following relevant specifications.
+  - **Use:** Doctype is used at the beginning of an HTML file.
+  - **Example:** The tag for an HTML5 document would be `<!DOCTYPE html>`
+  - **Source:** https://developer.mozilla.org/en-US/docs/Glossary/Doctype
 - [ ] How do you serve a page with content in multiple languages?
   - **Explanation:**
   - **Use:**
