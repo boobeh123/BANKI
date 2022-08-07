@@ -54,10 +54,10 @@ Don't sell yourself out and say "bootcamp" or "school".
   - **Cause:**
   - **Action:**
   - **Result:**
-- [ ] Tell me about when you had to deal with conflict within your team. How was the conflict solved? How did you handle that? How would you deal with it now?
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+- [X] Tell me about when you had to deal with conflict within your team. How was the conflict solved? How did you handle that? How would you deal with it now?
+  - **Cause:** At my last company I managed a driver who could not read.
+  - **Action:** We created a pickup & dropoff system using Google Maps pinpoint locations.
+  - **Result:** These pin locations took him directly to the customer location & shop location without needing the ability to read.
 - [ ] Give me an example of a time you had to take a creative and unusual approach to solve coding problem. How did this idea come to your mind? Why do you think it was unusual?
   - **Cause:**
   - **Action:**
@@ -230,10 +230,10 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Example:**
   - **Source:**
 - [ ] Explain CSS sprites, and how you would implement them on a page or site.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+  - **Explanation:** The practice of using one background image across multiple elements.
+  - **Use:** Spriting images cuts the number of HTTP requests made from using multiple images.
+  - **Example:** Take a handful of images, arrange them into a single image, and use the background-position property to move through images. 
+  - **Source:** https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests
 - [ ] How would you approach fixing browser-specific styling issues?
   - **Explanation:**
   - **Use:**
