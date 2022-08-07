@@ -229,7 +229,7 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Explain CSS sprites, and how you would implement them on a page or site.
+- [X] Explain CSS sprites, and how you would implement them on a page or site.
   - **Explanation:** The practice of using one background image across multiple elements.
   - **Use:** Spriting images cuts the number of HTTP requests made from using multiple images.
   - **Example:** Take a handful of images, arrange them into a single image, and use the background-position property to move through images. 
@@ -388,10 +388,10 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Example:**
   - **Source:**
 - [ ] What is a closure, and how/why would you use one?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+  - **Explanation:** An inner function that has access to the outer function.
+  - **Use:** Converting properties/methods into local variables, hiding it from the public interface.
+  - **Example:** Declaring a local variable in the outer function and calling the variable in the inner function.
+  - **Source:** https://youtu.be/PFmuCDHHpwk?t=2867 (Object-oriented Programming in JavaScript: Made Super Simple by Mosh Hamedani)
 - [ ] Can you describe the main difference between a `.forEach()` loop and a `.map()` loop and why you would pick one versus the other?
   - **Explanation:**
   - **Use:**
