@@ -387,7 +387,7 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What is a closure, and how/why would you use one?
+- [X] What is a closure, and how/why would you use one?
   - **Explanation:** An inner function that has access to the outer function.
   - **Use:** Converting properties/methods into local variables, hiding it from the public interface.
   - **Example:** Declaring a local variable in the outer function and calling the variable in the inner function.
@@ -698,11 +698,11 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] How do you prevent/fix callback hell?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] How do you prevent/fix callback hell?
+  - **Explanation:** Callback hell are multiple nested functions or macro-tasks.
+  - **Use:** Promises were invented to better handle tasks & solve callback hell.
+  - **Example:** The .then() handler which can be chained instead of nesting multiple callbacks.
+  - **Source:** https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/
 - [ ] Explain the role of REPL in Node.js.
   - **Explanation:**
   - **Use:**
