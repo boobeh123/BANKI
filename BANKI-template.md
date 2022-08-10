@@ -146,11 +146,11 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:** Doctype is used at the beginning of an HTML file.
   - **Example:** The tag for an HTML5 document would be `<!DOCTYPE html>`
   - **Source:** https://developer.mozilla.org/en-US/docs/Glossary/Doctype
-- [ ] How do you serve a page with content in multiple languages?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] How do you serve a page with content in multiple languages?
+  - **Explanation:** The lang attribute defines the language on the page or with specific elements.
+  - **Use:** I can declare an element and add the lang attribute with its value being the language.
+  - **Example:** I can set a specific paragraph's language to French by using the `<p lang="fr">` or set the entire page's language to British English with `<html lang="en-GB">`.
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang
 - [ ] What kinds of things must you be wary of when designing or developing for multilingual sites?
   - **Explanation:**
   - **Use:**
