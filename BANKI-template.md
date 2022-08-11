@@ -294,11 +294,11 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Describe pseudo-elements and discuss what they are used for.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Describe pseudo-elements and discuss what they are used for.
+  - **Explanation:** A pseudo-element is a keyword added to a selector that allows a specific part of the selected element(s) to be styled.
+  - **Use:** I can target an `input` element's `::placeholder` pseudo-element and change the opacity of the text displayed in the input.
+  - **Example:** `input::placeholder {opacity: 0.25;}`
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements 
 - [ ] Explain your understanding of the box model and how you would tell the browser, through CSS, to render your layout in different box models.
   - **Explanation:**
   - **Use:**
@@ -699,9 +699,9 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Example:**
   - **Source:**
 - [X] How do you prevent/fix callback hell?
-  - **Explanation:** Callback hell are multiple nested functions or macro-tasks.
-  - **Use:** Promises were invented to better handle tasks & solve callback hell.
-  - **Example:** The .then() handler which can be chained instead of nesting multiple callbacks.
+  - **Explanation:** Callback hell are multiple nested callback functions that are dependent on each other.
+  - **Use:** This can be solved by using async/await keywords in an async function, chaining promises, using promise.all() or promise.any().
+  - **Example:** In an async function we can `await fetch` & `await response.json()` or we can use a conditional inside a `.then()` handler and check for that response.
   - **Source:** https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/
 - [ ] Explain the role of REPL in Node.js.
   - **Explanation:**
