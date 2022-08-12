@@ -482,11 +482,11 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What is the difference between `==` and `===`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is the difference between `==` and `===`?
+  - **Explanation:** The equality operator attempts to convert data types then checks values & strict equality operator checks for values & its data type.
+  - **Use:** Use strict equality and avoid comparing an object & a primitive with the equality operator, as it will convert the object to a primitive.
+  - **Example:** Comparing `'1' == 1` returns true, comparing `'1' === 1` returns false.
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality
 - [ ] Explain the same-origin policy with regards to JavaScript.
   - **Explanation:**
   - **Use:**
