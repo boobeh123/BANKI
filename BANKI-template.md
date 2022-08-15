@@ -655,11 +655,11 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What is asynchronous programming, and why is it important in JavaScript?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is asynchronous programming, and why is it important in JavaScript?
+  - **Explanation:** JavaScript starts & completes tasks one after another by default and asynchronous programming is a technique that enables a program to start & complete tasks independent of each other.
+  - **Use:** It is used when there is wait time between fetching and receiving data from an API or server.
+  - **Example:** Using `async...await` with `fetch()` to retrieve data from an API.
+  - **Source:** https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing
 
 ### Node
 
