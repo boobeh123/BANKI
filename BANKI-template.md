@@ -167,10 +167,12 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Example:**
   - **Source:**
 - [ ] Describe the difference between a cookie, sessionStorage and localStorage.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+  - **Explanation:** Local & session storage are web storage objects saved in the browser and are not sent to a server. Cookies are small pieces of data that are stored in the browser and sent back to a server.
+  - **Use:** The web objects saved from local storage doesn't expire & the data from sessionStorage is cleared when the page session ends. Cookies are used in session management, tracking, and personalization. 
+  - **Example:** I can set a web storage object using `localStorage.name = John;`, I can get the object using `console.log(localStorage.name);` and remove the object using `delete localStorage.name;`
+  - **Source1:** https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
+  - **Source2:** https://javascript.info/localstorage
+  - **Source3:** https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 - [ ] Describe the difference between `<script>, <script async> and <script defer>`.
   - **Explanation:**
   - **Use:**
