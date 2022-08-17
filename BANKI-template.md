@@ -216,11 +216,11 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Describe z-index and how stacking context is formed.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Describe z-index and how stacking context is formed.
+  - **Explanation:** Elements at the top of the DOM are positioned behind elements coming after them.
+  - **Use:** The element with the highest z-index value will appear on top and to use the z-index property, you must first apply a position value of relative, absolute, or fixed. 
+  - **Example:** `.container {position: absolute} .box:nth-child(1) {z-index: 1} .box:nth-child(2) {z-index: 3} .box:nth-child(3) {z-index: 2}` The 2nd .box element will appear ontop the 3rd .box element and will overlap the 1st .box element.
+  - **Source:** https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property
 - [ ] Describe BFC (Block Formatting Context) and how it works.
   - **Explanation:**
   - **Use:**
