@@ -392,7 +392,7 @@ Most of the technical questions should have a three sentence response in the EUE
 - [X] What is a closure, and how/why would you use one?
   - **Explanation:** An inner function that has access to the outer function.
   - **Use:** Converting properties/methods into local variables, hiding it from the public interface.
-  - **Example:** Declaring a local variable in the outer function and calling the variable in the inner function.
+  - **Example:** Declaring a local variable in the outer function and calling the variable in the inner function. 
   - **Source:** https://youtu.be/PFmuCDHHpwk?t=2867 (Object-oriented Programming in JavaScript: Made Super Simple by Mosh Hamedani)
 - [ ] Can you describe the main difference between a `.forEach()` loop and a `.map()` loop and why you would pick one versus the other?
   - **Explanation:**
@@ -414,11 +414,15 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What is the difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is the difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+  - **Explanation:** The first is a constructor, based on the constructor's name being capitalized. The second & third are creating an instance of the Person class, but the second is incorrect. Using the `new` keyword in front of a function call will treat the function as a constructor.
+  - **Use & Example:** 
+  `function Person(height) {this.height = height;}`
+  `let tallHuman = new Person(78);`
+  `tallHuman` `Output -> Person {height: 78}`
+  `let avgHuman = Person(60)`
+  `avgHuman` `Output -> undefined`
+  - **Source:** https://eloquentjavascript.net/06_object.html#c_p+u3OtMv8K
 - [ ] What's the difference between `.call()` and `.apply()`?
   - **Explanation:**
   - **Use:**
