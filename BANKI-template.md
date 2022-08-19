@@ -513,10 +513,21 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5
-  - **Explanation:**
-  - **Use:**
+- [X] Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5
+  - **Explanation:** I initialize this for loop by declaring a variable named `i` and set its value to `1`. I set the stopping condition when `i` is `less than or equal to 100`. My final expression is to increment the value stored inside of `i` by one on every iteration.
+  - **Use:** I start the for loop at 1 because 0 will print `"fizzbuzz"` to the console on the first iteration. The stopping condition is `<= 100` so the loop does not stop when `i = 99`. The final expression increments the value of `i` so I am eventually able to escape this loop and prevent an infinite loop.
   - **Example:**
+`for (let i = 1; i <= 100; i++) {`
+    `if ((i % 3 === 0) && (i % 5 === 0)) {`
+        `console.log("fizzbuzz");`
+    `} else if (i % 3 === 0) {`
+        `console.log("fizz");`
+    `} else if (i % 5 === 0) {`
+        `console.log("buzz");`
+    `} else {`
+        `console.log(i);`
+    `}`
+`}`
   - **Source:**
 - [ ] Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
   - **Explanation:**
