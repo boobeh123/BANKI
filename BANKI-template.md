@@ -179,10 +179,10 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Example:**
   - **Source:**
 - [ ] Why is it generally a good idea to position CSS `<link>`s within `<head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+  - **Explanation:** These unique placements help with the load time of a web page. 
+  - **Use:** CSS can be loaded while the the website is being loaded and javascript can only render one file at a time, which may prohibit other files from loading. 
+  - **Example:** Placing the `<link rel="stylesheet" href="style.css">` after the `<title>` element & the ` <script src="main.js"></script>` just before the `</body` closing tag.
+  - **Source:** https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests
 - [ ] What is progressive rendering?
   - **Explanation:**
   - **Use:**
