@@ -178,7 +178,7 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Why is it generally a good idea to position CSS `<link>`s within `<head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+- [X] Why is it generally a good idea to position CSS `<link>`s within `<head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
   - **Explanation:** These unique placements help with the load time of a web page. 
   - **Use:** CSS can be loaded while the the website is being loaded and javascript can only render one file at a time, which may prohibit other files from loading. 
   - **Example:** Placing the `<link rel="stylesheet" href="style.css">` after the `<title>` element & the ` <script src="main.js"></script>` just before the `</body` closing tag.
@@ -201,11 +201,11 @@ Most of the technical questions should have a three sentence response in the EUE
 
 ### CSS
 
-- [ ] What is CSS selector specificity and how does it work?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is CSS selector specificity and how does it work?
+  - **Explanation:** Every CSS selector has a specificity weight and selectors with more specificity has priority during cascade rendering.
+  - **Use:** When a selector targets an element it holds a weight of 001, when it targets a class it holds a weight of 010, when it targets an ID it holds a weight of 100 and when an element contains !important it holds a weight of 1000,
+  - **Example:** `<h1 class="greet">` `.greet {color: green;}` `h1 {color: blue;}`. We have a heading element with a class of greet in the HTML and here I am targetting the greet class and changing the text color to green. I am also cascading over the heading element and changing the text color to blue after. The heading text remains green due to higher specificity weight.
+  - **Source:** https://learn.shayhowe.com/html-css/getting-to-know-css/#specificity
 - [ ] What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
   - **Explanation:**
   - **Use:**
