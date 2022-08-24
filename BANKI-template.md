@@ -532,7 +532,7 @@ Most of the technical questions should have a three sentence response in the EUE
         `console.log(i);`
     `}`
 `}`
-  - **Source:**
+  - **Source:** https://eloquentjavascript.net/02_program_structure.html#i_rebKE3gdjV
 - [ ] Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
   - **Explanation:**
   - **Use:**
