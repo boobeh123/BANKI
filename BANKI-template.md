@@ -211,11 +211,15 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Describe floats and how they work.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Describe floats and how they work.
+  - **Explanation:** The float property takes an element, removes it from the normal flow of a page, and positions it to the left or right of its parent element.
+  - **Use:** A floated element must be contained or cleared and floating an inline level element will convert it to a block level element.
+  - **Example:** The example below removes the anchor from the page and positions it to the left our header. The header's height would collapse without the clearfix class.
+  `<header class="clearfix">` 
+    `<a href="#"></a>`
+  `</header>`
+  `a {float: left;} .clearfix:before,.clearfix:after {content: "";display: table;}.clearfix:after {clear: both;}.clearfix {clear: both;*zoom: 1;}`
+  - **Source:** https://learn.shayhowe.com/html-css/positioning-content/#floats
 - [X] Describe z-index and how stacking context is formed.
   - **Explanation:** Elements at the top of the DOM are positioned behind elements coming after them.
   - **Use:** The element with the highest z-index value will appear on top and to use the z-index property, you must first apply a position value of relative, absolute, or fixed. 
