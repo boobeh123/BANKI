@@ -66,10 +66,10 @@ Don't sell yourself out and say "bootcamp" or "school".
   - **Cause:**
   - **Action:**
   - **Result:**
-- [ ] Give an example of an important project goal you reached and how you achieved it.
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+- [X] Give an example of an important project goal you reached and how you achieved it.
+  - **Cause:** At my last opportunity my coworkers had to go through physical contracts to verify information.
+  - **Action:** I created digital records of these contracts and entered data from it into a spreadsheet.
+  - **Result:** My coworkers were able to use the search function to verify customer information exponentially quicker.
 - [ ] Describe a situation in which you experienced difficulty in getting others to accept your ideas? What was your approach? How did this work? Were you able to successfully persuade someone to see things your way
   - **Cause:**
   - **Action:**
