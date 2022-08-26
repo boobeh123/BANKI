@@ -47,13 +47,13 @@ Don't sell yourself out and say "bootcamp" or "school".
   - **Action:** I looked up documentation on the MDN to build a project.
   - **Result:** I applied the OOP principles into this project.
 - [ ] Tell me about a time you had to work on several projects at once. How did you handle this?
-  - **Cause:**
+  - **Cause:** 
   - **Action:**
   - **Result:**
-- [ ] Describe a situation in which you felt you had not communicated well enough. What did you do? How did you handle it?
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+- [X] Describe a situation in which you felt you had not communicated well enough. What did you do? How did you handle it?
+  - **Cause:** At my last company I had to drive a customer's vehicle up onto the flatbed and I didn't ask for more information about modifications to the vehicle.
+  - **Action:** I needed to completely understood what my process would be start-to-finish.
+  - **Result:** I ensured I had the necessary information so I could use the tools required to approach every situation safely in both parties interest.
 - [X] Tell me about when you had to deal with conflict within your team. How was the conflict solved? How did you handle that? How would you deal with it now?
   - **Cause:** At my last company I managed a driver who could not read.
   - **Action:** We created a pickup & dropoff system using Google Maps pinpoint locations.
@@ -67,7 +67,7 @@ Don't sell yourself out and say "bootcamp" or "school".
   - **Action:**
   - **Result:**
 - [X] Give an example of an important project goal you reached and how you achieved it.
-  - **Cause:** At my last opportunity my coworkers had to go through physical contracts to verify information.
+  - **Cause:** At my last company my coworkers had to go through physical contracts to verify information.
   - **Action:** I created digital records of these contracts and entered data from it into a spreadsheet.
   - **Result:** My coworkers were able to use the search function to verify customer information exponentially quicker.
 - [ ] Describe a situation in which you experienced difficulty in getting others to accept your ideas? What was your approach? How did this work? Were you able to successfully persuade someone to see things your way
@@ -79,7 +79,7 @@ Don't sell yourself out and say "bootcamp" or "school".
   - **Action:**
   - **Result:**
 - [ ] Tell me about a situation when you made a mistake at work. What happened exactly and how did you deal with it? What steps did you take to improve the situation?
-  - **Cause:**
+  - **Cause:** 
   - **Action:**
   - **Result:**
 - [ ] Tell me about a time when you worked with someone who was not completing his or her share of the work. How did you handle the situation? Did you discuss your concern with your coworker? With your manager? If yes, how did your coworker respond to your concern? What was your manager's response?
