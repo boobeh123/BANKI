@@ -94,10 +94,10 @@ Don't sell yourself out and say "bootcamp" or "school".
   - **Cause:**
   - **Action:**
   - **Result:**
-- [ ] Tell me about your experience at 100Devs.
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+- [X] Tell me about your experience at 100Devs.
+  - **Cause:** I have acquired skills that transfer everywhere. 
+  - **Action:** I discovered how to learn, I started planning my days, I participate in social settings, I actually read & now I look for ways to provide value.
+  - **Result:** The time and effort I put into 100Devs is how I want to approach every opportunity.
 - [ ] What do you know about our company?
   - **Cause:**
   - **Action:**
