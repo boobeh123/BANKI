@@ -95,7 +95,7 @@ Don't sell yourself out and say "bootcamp" or "school".
   - **Action:**
   - **Result:**
 - [X] Tell me about your experience at 100Devs.
-  - **Cause:** I have acquired skills that transfer everywhere. 
+  - **Cause:** At my last opportunity I have acquired skills that transfer everywhere. 
   - **Action:** I discovered how to learn, I started planning my days, I participate in social settings, I actually read & now I look for ways to provide value.
   - **Result:** The time and effort I put into 100Devs is how I want to approach every opportunity.
 - [ ] What do you know about our company?
@@ -118,10 +118,10 @@ Don't sell yourself out and say "bootcamp" or "school".
   - **Cause:**
   - **Action:**
   - **Result:**
-- [ ] What do you read on a regular basis?
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+- [X] What do you read on a regular basis?
+  - **Cause:** At my last opportunity I have been tasked to provide solutions to daily problems.
+  - **Action:** This required reading through text, noting what the problem is, what the solution should look like, and explaining the process step-by-step.
+  - **Result:** This has given me the ability to think logically, think outside the box, and ask questions to ensure both parties are on the same page.
 - [ ] What's some critical feedback you've gotten recently?
   - **Cause:**
   - **Action:**
