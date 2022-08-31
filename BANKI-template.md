@@ -206,11 +206,31 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:** When a selector targets an element it holds a weight of 001, when it targets a class it holds a weight of 010, when it targets an ID it holds a weight of 100 and when an element contains !important it holds a weight of 1000,
   - **Example:** `<h1 class="greet">` `.greet {color: green;}` `h1 {color: blue;}`. We have a heading element with a class of greet in the HTML and here I am targetting the greet class and changing the text color to green. I am also cascading over the heading element and changing the text color to blue after. The heading text remains green due to higher specificity weight.
   - **Source:** https://learn.shayhowe.com/html-css/getting-to-know-css/#specificity
-- [ ] What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+  - **Explanation:** Every web browser has its default styles and resetting or normalizing CSS ensures cross-browser compatibility. I have mostly used the reset stylesheet as normalize requires a strong understanding of CSS.
+  - **Use:** A reset stylesheet reduces browser inconsistencies and a normalize stylesheet sets element with modern standards.
+  - **Example:** `See below:`
+`Reset:`
+```CSS
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+```
+`Normalize:`
+```CSS
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+```
+  - **Source:** https://learn.shayhowe.com/html-css/building-your-first-web-page/#using-css-resets
+  - **Source2:** https://meyerweb.com/eric/tools/css/reset/
+  - **Source3:** https://necolas.github.io/normalize.css/
 - [X] Describe floats and how they work.
   - **Explanation:** The float property takes an element, removes it from the normal flow of a page, and positions it to the left or right of its parent element.
   - **Use:** A floated element must be contained or cleared and floating an inline level element will convert it to a block level element.
