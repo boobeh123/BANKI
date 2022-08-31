@@ -144,12 +144,12 @@ Most of the technical questions should have a three sentence response in the EUE
 - [X] What does a doctype do?
   - **Explanation:** Doctype ensures that the browser makes an attempt at following relevant specifications.
   - **Use:** Doctype is used at the beginning of an HTML file.
-  - **Example:** The tag for an HTML5 document would be ```HTML <!DOCTYPE html> ```
+  - **Example:** The tag for an HTML5 document would be `<!DOCTYPE html>`
   - **Source:** https://developer.mozilla.org/en-US/docs/Glossary/Doctype
 - [X] How do you serve a page with content in multiple languages?
   - **Explanation:** The lang attribute defines the language on the page or with specific elements.
   - **Use:** I can declare an element and add the lang attribute with its value being the language.
-  - **Example:** I can set a specific paragraph's language to French by using the ```HTML <p lang="fr"> ``` or set the entire page's language to British English with ```HTML <html lang="en-GB"> ```.
+  - **Example:** I can set a specific paragraph's language to French by using the `<p lang="fr">` or set the entire page's language to British English with `<html lang="en-GB">`.
   - **Source:** https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang
 - [ ] What kinds of things must you be wary of when designing or developing for multilingual sites?
   - **Explanation:**
@@ -169,7 +169,7 @@ Most of the technical questions should have a three sentence response in the EUE
 - [ ] Describe the difference between a cookie, sessionStorage and localStorage.
   - **Explanation:** Local & session storage are web storage objects saved in the browser and are not sent to a server. Cookies are small pieces of data that are stored in the browser and sent back to a server.
   - **Use:** The web objects saved from local storage doesn't expire & the data from sessionStorage is cleared when the page session ends. Cookies are used in session management, tracking, and personalization. 
-  - **Example:** I can set a web storage object using ```HTML localStorage.name = John; ```, I can get the object using ```HTML console.log(localStorage.name); ``` and remove the object using ```HTML delete localStorage.name;```
+  - **Example:** I can set a web storage object using `localStorage.name = John;`, I can get the object using `console.log(localStorage.name);` and remove the object using `delete localStorage.name;`
   - **Source1:** https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
   - **Source2:** https://javascript.info/localstorage
   - **Source3:** https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
@@ -181,7 +181,7 @@ Most of the technical questions should have a three sentence response in the EUE
 - [X] Why is it generally a good idea to position CSS `<link>`s within `<head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
   - **Explanation:** These unique placements help with the load time of a web page. 
   - **Use:** CSS can be loaded while the the website is being loaded and javascript can only render one file at a time, which may prohibit other files from loading. 
-  - **Example:** Placing the ```HTML <link rel="stylesheet" href="style.css"> ``` after the ```HTML <title> ``` element & the ```HTML <script src="main.js"></script> ``` just before the ```HTML </body ``` closing tag.
+  - **Example:** Placing the `<link rel="stylesheet" href="style.css">` after the `<title>` element & the `<script src="main.js"></script>` just before the `</body>` closing tag.
   - **Source:** https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests
 - [ ] What is progressive rendering?
   - **Explanation:**
