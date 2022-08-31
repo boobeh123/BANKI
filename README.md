@@ -1,9 +1,3 @@
-## How to navigate through this repository
-1. Locate the `main` branch drop down menu or see `*`
-2. Switch to the `boobeh-banki` branch
-3. Click on the `BANKI-template.md` file
-* [Direct link to the boobeh-banki branch](https://github.com/boobeh123/BANKI/tree/boobeh-banki)
-
 ![Banki Header(1)](https://user-images.githubusercontent.com/100104319/169104708-b2001ad5-18ce-4f19-aa92-9246cf5b219a.jpg)
 ## How to use
 1. Fork or download the [template](https://github.com/curtisbarnard/BANKI/blob/main/BANKI-template.md)
