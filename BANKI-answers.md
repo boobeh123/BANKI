@@ -204,7 +204,17 @@ Most of the technical questions should have a three sentence response in the EUE
 - [X] What is CSS selector specificity and how does it work?
   - **Explanation:** Every CSS selector has a specificity weight and selectors with more specificity has priority during cascade rendering.
   - **Use:** When a selector targets an element it holds a weight of 001, when it targets a class it holds a weight of 010, when it targets an ID it holds a weight of 100 and when an element contains !important it holds a weight of 1000,
-  - **Example:** `<h1 class="greet">` `.greet {color: green;}` `h1 {color: blue;}`. We have a heading element with a class of greet in the HTML and here I am targetting the greet class and changing the text color to green. I am also cascading over the heading element and changing the text color to blue after. The heading text remains green due to higher specificity weight.
+  - **Example:** `see below` We have a heading element with a class of greet in the HTML and here I am targetting the greet class and changing the text color to green. I am also cascading over the heading element and changing the text color to blue after. The heading text remains green due to higher specificity weight.
+  ```HTML
+  <h1 class="greet">
+  ```
+  ```CSS
+  .greet {
+    color: green;
+  }
+  h1 {
+    color: blue;
+  }``` 
   - **Source:** https://learn.shayhowe.com/html-css/getting-to-know-css/#specificity
 - [X] What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
   - **Explanation:** Every web browser has its default styles and resetting or normalizing CSS ensures cross-browser compatibility. I have mostly used the reset stylesheet as normalize requires a strong understanding of CSS.
@@ -234,16 +244,47 @@ h1, h2, h3, h4, h5, h6 {
 - [X] Describe floats and how they work.
   - **Explanation:** The float property takes an element, removes it from the normal flow of a page, and positions it to the left or right of its parent element.
   - **Use:** A floated element must be contained or cleared and floating an inline level element will convert it to a block level element.
-  - **Example:** The example below removes the anchor from the page and positions it to the left our header. The header's height would collapse without the clearfix class.
-  `<header class="clearfix">` 
-    `<a href="#"></a>`
-  `</header>`
-  `a {float: left;} .clearfix:before,.clearfix:after {content: "";display: table;}.clearfix:after {clear: both;}.clearfix {clear: both;*zoom: 1;}`
+  - **Example:** `see below` The example below removes the anchor from the page and positions it to the left our header. The header's height would collapse without the clearfix class.
+  ```HTML
+  <header class="clearfix"> 
+    <a href="#"></a>
+  </header>
+  ```
+  ```CSS
+  a {
+    float: left;
+  }
+  .clearfix:before,
+  .clearfix:after {
+    content: "";
+    display: table;
+  }
+  .clearfix:after {
+    clear: both;
+  }.clearfix {
+    clear: both;
+    *zoom: 1;
+    }
+  ```
   - **Source:** https://learn.shayhowe.com/html-css/positioning-content/#floats
 - [X] Describe z-index and how stacking context is formed.
   - **Explanation:** Elements at the top of the DOM are positioned behind elements coming after them.
   - **Use:** The element with the highest z-index value will appear on top and to use the z-index property, you must first apply a position value of relative, absolute, or fixed. 
-  - **Example:** `.container {position: absolute} .box:nth-child(1) {z-index: 1} .box:nth-child(2) {z-index: 3} .box:nth-child(3) {z-index: 2}` The 2nd .box element will appear ontop the 3rd .box element and will overlap the 1st .box element.
+  - **Example:** `see below`  The 2nd .box element will appear ontop the 3rd .box element and will overlap the 1st .box element.
+  ```CSS
+  .container {
+    position: absolute;
+  }
+  .box:nth-child(1) {
+    z-index: 1;
+  }
+  .box:nth-child(2) {
+    z-index: 3;
+  }
+  .box:nth-child(3) {
+    z-index: 2;
+  }
+  ```
   - **Source:** https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property
 - [ ] Describe BFC (Block Formatting Context) and how it works.
   - **Explanation:**
@@ -258,7 +299,18 @@ h1, h2, h3, h4, h5, h6 {
 - [X] Explain CSS sprites, and how you would implement them on a page or site.
   - **Explanation:** The practice of using one background image across multiple elements.
   - **Use:** Spriting images cuts the number of HTTP requests made from using multiple images.
-  - **Example:** Take a handful of images, arrange them into a single image, and use the background-position property to move through images. 
+  - **Example:** `see below` Take a handful of images, arrange them into a single image, and use the `background-position` property to move through images. 
+  ```CSS
+  .spanA {
+    background-position: 0px;
+  }
+  .spanB {
+    background-position: 16px;
+  }
+  .spanC {
+    background-position: 32px;
+  }
+  ```
   - **Source:** https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests
 - [ ] How would you approach fixing browser-specific styling issues?
   - **Explanation:**
@@ -323,7 +375,12 @@ h1, h2, h3, h4, h5, h6 {
 - [X] Describe pseudo-elements and discuss what they are used for.
   - **Explanation:** A pseudo-element is a keyword added to a selector that allows a specific part of the selected element(s) to be styled.
   - **Use:** I can target an `input` element's `::placeholder` pseudo-element and change the opacity of the text displayed in the input.
-  - **Example:** `input::placeholder {opacity: 0.25;}`
+  - **Example:** `see below`
+  ```CSS
+  input::placeholder {
+    opacity: 0.25;
+  }
+  ```
   - **Source:** https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements 
 - [ ] Explain your understanding of the box model and how you would tell the browser, through CSS, to render your layout in different box models.
   - **Explanation:**
@@ -440,12 +497,16 @@ h1, h2, h3, h4, h5, h6 {
   - **Source:**
 - [X] What is the difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
   - **Explanation:** The first is a constructor, based on the constructor's name being capitalized. The second & third are creating an instance of the Person class, but the second is incorrect. Using the `new` keyword in front of a function call will treat the function as a constructor.
-  - **Use & Example:** 
-  `function Person(height) {this.height = height;}`
-  `let tallHuman = new Person(78);`
-  `tallHuman` `Output -> Person {height: 78}`
-  `let avgHuman = Person(60)`
-  `avgHuman` `Output -> undefined`
+  - **Use & Example:** `see below`
+  ```JavaScript
+  function Person(height) {
+    this.height = height;
+  }
+  let tallHuman = new Person(78);
+  let avgHuman = Person(60);
+  console.log(tallHuman); // Output -> Person {height: 78}
+  console.log(avgHuman);  // Output -> undefined
+  ```
   - **Source:** https://eloquentjavascript.net/06_object.html#c_p+u3OtMv8K
 - [ ] What's the difference between `.call()` and `.apply()`?
   - **Explanation:**
@@ -540,18 +601,20 @@ h1, h2, h3, h4, h5, h6 {
 - [X] Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5
   - **Explanation:** I initialize this for loop by declaring a variable named `i` and set its value to `1`. I set the stopping condition when `i` is `less than or equal to 100`. My final expression is to increment the value stored inside of `i` by one on every iteration.
   - **Use:** I start the for loop at 1 because 0 will print `"fizzbuzz"` to the console on the first iteration. The stopping condition is `<= 100` so the loop does not stop when `i = 99`. The final expression increments the value of `i` so I am eventually able to escape this loop and prevent an infinite loop.
-  - **Example:**
-`for (let i = 1; i <= 100; i++) {`
-    `if ((i % 3 === 0) && (i % 5 === 0)) {`
-        `console.log("fizzbuzz");`
-    `} else if (i % 3 === 0) {`
-        `console.log("fizz");`
-    `} else if (i % 5 === 0) {`
-        `console.log("buzz");`
-    `} else {`
-        `console.log(i);`
-    `}`
-`}`
+  - **Example:** `see below`
+  ```JavaScript
+  for (let i = 1; i <= 100; i++) {
+    if ((i % 3 === 0) && (i % 5 === 0)) {
+      console.log("fizzbuzz");
+    } else if (i % 3 === 0) {
+      console.log("fizz");
+    } else if (i % 5 === 0) {
+      console.log("buzz");
+    } else {
+      console.log(i);
+    }
+  }
+  ```
   - **Source:** https://eloquentjavascript.net/02_program_structure.html#i_rebKE3gdjV
 - [ ] Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
   - **Explanation:**
@@ -603,11 +666,12 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What is event loop? What is the difference between call stack and task queue?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is event loop? What is the difference between call stack and task queue?
+  - **Explanation:** JavaScript is a single-threaded, non-blocking synchronous language that contains a call stack, a task queue, and an event loop.
+  The call stack is a Last In First Out data structure and the task queue is a First In First Out data structure. 
+  The event loop runs tasks in the call stack first and when the stack is empty the event loop picks up tasks from the task queue and moves those tasks to the call stack to be run.
+  - **Source:** Philip Roberts: The Event Loop JSConf
+  - **Source2:** Jake Archibald: In The Loop JSConf
 - [ ] Explain the differences on the usage of foo between `function foo() {}` and `var foo = function() {}`
   - **Explanation:**
   - **Use:**
