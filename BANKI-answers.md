@@ -214,12 +214,14 @@ Most of the technical questions should have a three sentence response in the EUE
   }
   h1 {
     color: blue;
-  }``` 
+  }
+  ``` 
   - **Source:** https://learn.shayhowe.com/html-css/getting-to-know-css/#specificity
 - [X] What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
   - **Explanation:** Every web browser has its default styles and resetting or normalizing CSS ensures cross-browser compatibility. I have mostly used the reset stylesheet as normalize requires a strong understanding of CSS.
   - **Use:** A reset stylesheet reduces browser inconsistencies and a normalize stylesheet sets element with modern standards.
   - **Example:** `See below:`
+
 `Reset:`
 ```CSS
 h1, h2, h3, h4, h5, h6 {
@@ -670,8 +672,8 @@ h1, h2, h3, h4, h5, h6 {
   - **Explanation:** JavaScript is a single-threaded, non-blocking synchronous language that contains a call stack, a task queue, and an event loop.
   The call stack is a Last In First Out data structure and the task queue is a First In First Out data structure. 
   The event loop runs tasks in the call stack first and when the stack is empty the event loop picks up tasks from the task queue and moves those tasks to the call stack to be run.
-  - **Source:** Philip Roberts: The Event Loop JSConf
-  - **Source2:** Jake Archibald: In The Loop JSConf
+  - **Source:** [Philip Roberts: The Event Loop JSConf](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+  - **Source2:** [Jake Archibald: In The Loop JSConf](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
 - [ ] Explain the differences on the usage of foo between `function foo() {}` and `var foo = function() {}`
   - **Explanation:**
   - **Use:**
@@ -951,16 +953,36 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What is a Queue?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
-- [ ] What is a Stack?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is a Queue?
+  - **Explanation:** The task queue is a First In First Out data structure. 
+  - **Use:** Code that is not synchronous is moved to the task queue and is executed after the call stack is empty.
+  - **Example:** `see below`
+  ```JavaScript
+  console.log('One');
+  setTimeout(() => {
+    console.log('Two');
+  }, 0);
+  console.log('Three');
+  // Output -> One, Three, Two
+  ```
+  - **Source:** [Philip Roberts: The Event Loop JSConf](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+  - **Source2:** [Jake Archibald: In The Loop JSConf](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
+  - **Explanation:** 
+  The event loop runs tasks in the call stack first and when the stack is empty the event loop picks up tasks from the task queue and moves those tasks to the call stack to be run.
+- [X] What is a Stack?
+  - **Explanation:** The call stack is a Last In First Out data structure. 
+  - **Use:** Each line of synchronous code is a task that is moved to the stack and the last task in the stack is executed first.
+  - **Example:** `see below`
+  ```JavaScript
+  console.log('One');
+  setTimeout(() => {
+    console.log('Two');
+  }, 0);
+  console.log('Three');
+  // Output -> One, Three, Two
+  ```
+  - **Source:** [Philip Roberts: The Event Loop JSConf](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+  - **Source2:** [Jake Archibald: In The Loop JSConf](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
 - [ ] What is a Hash Table?
   - **Explanation:**
   - **Use:**
