@@ -885,11 +885,10 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What is package.json? What is it used for?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is package.json? What is it used for?
+  - **Explanation:** It is a configuration file that npm uses to save all project information. This file can be shared with other developers to install required package needed for the project. 
+  - **Use:** & **Example:** Typing the command `npm init` will generate the package.json file after answering the prompted questions. Scripts can be added to this file to start a server.
+  - **Source:** https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosaurs-f695e9747b70
 - [ ] What is libuv?
   - **Explanation:**
   - **Use:**
@@ -967,8 +966,6 @@ h1, h2, h3, h4, h5, h6 {
   ```
   - **Source:** [Philip Roberts: The Event Loop JSConf](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
   - **Source2:** [Jake Archibald: In The Loop JSConf](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
-  - **Explanation:** 
-  The event loop runs tasks in the call stack first and when the stack is empty the event loop picks up tasks from the task queue and moves those tasks to the call stack to be run.
 - [X] What is a Stack?
   - **Explanation:** The call stack is a Last In First Out data structure. 
   - **Use:** Each line of synchronous code is a task that is moved to the stack and the last task in the stack is executed first.
