@@ -700,10 +700,28 @@ h1, h2, h3, h4, h5, h6 {
   - **Example:**
   - **Source:**
 - [ ] What is the definition of a higher-order function?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+  - **Explanation:** A function that either accepts functions are parameters, returns a function, or both.
+  - **Use:** I can create a higher-order function to test & compare the output of another function.
+  - **Example:** `see below`
+  ```JavaScript
+  // Callback function
+  const addTwo = num => {
+    return num + 2;
+  }
+  // Higher-order function
+  const checkConsistentOutput = (func, val) => {
+    let checkA = val + 2;
+    let checkB = func(val);
+    if (checkA === checkB) {
+      return checkB;
+    } else {
+        return `inconsistent results`;
+    }
+  }
+  console.log(checkConsistentOutput(addTwo, 5));
+  console.log(addTwo(5));
+  ```
+  - **Source:** https://www.codecademy.com/courses/introduction-to-javascript/lessons/higher-order-functions/exercises/review
 - [ ] Can you give an example for destructuring an object or an array?
   - **Explanation:**
   - **Use:**
