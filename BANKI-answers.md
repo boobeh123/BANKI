@@ -218,7 +218,7 @@ Most of the technical questions should have a three sentence response in the EUE
   ``` 
   - **Source:** https://learn.shayhowe.com/html-css/getting-to-know-css/#specificity
 - [X] What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
-  - **Explanation:** Every web browser has its default styles and resetting or normalizing CSS ensures cross-browser compatibility. I have mostly used the reset stylesheet as normalize requires a strong understanding of CSS.
+  - **Explanation:** Every web browser has its default styles and resetting or normalizing CSS ensures cross-browser compatibility. I have mostly used the reset stylesheet and recently combine the reset with a normlaize stylesheet. This approach allowed me to reduce inconsistencies without having to redefine the base-level of styling to elements.
   - **Use:** A reset stylesheet reduces browser inconsistencies and a normalize stylesheet sets element with modern standards.
   - **Example:** `See below:`
 
@@ -389,11 +389,26 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What does `* { box-sizing: border-box; }` do? What are its advantages?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What does `* { box-sizing: border-box; }` do? What are its advantages?
+  - **Explanation:** This declaration alters the box model so that any border or padding property values are included within the width and height of an element. Its advantage allows us to change exactly how the box model works and how an element’s size is calculated.
+  - **Use:** If we set an element's width to be 200 pixels and add 5 pixels of padding, the actual width remains 200 pixels.
+  - **Example:** `see below`
+  ```HTML
+  <div class="withBoxSizing"></div><!--Width = 200pixels (border&padding)-->
+  <div class="noBoxSizing"></div><!--Width = 304pixels (Additive border&padding)-->
+  ```
+  ```CSS
+  .withBoxSizing {
+    box-sizing: border-box;
+  }
+  div {
+    border: 2px solid red;
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+  }
+  ```
+  - **Source:** https://learn.shayhowe.com/html-css/opening-the-box-model/#box-model
 - [ ] What is the CSS `display` property and can you give a few examples of its use?
   - **Explanation:**
   - **Use:**
@@ -699,7 +714,7 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What is the definition of a higher-order function?
+- [X] What is the definition of a higher-order function?
   - **Explanation:** A function that either accepts functions are parameters, returns a function, or both.
   - **Use:** I can create a higher-order function to test & compare the output of another function.
   - **Example:** `see below`
