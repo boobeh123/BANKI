@@ -678,11 +678,43 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Explain the difference between synchronous and asynchronous functions.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Explain the difference between synchronous and asynchronous functions.
+  - **Explanation:** Synchronous functions complete tasks one after another and if one task stops, the following tasks stop.
+  Asynchronous functions complete tasks independent of each other and if one task stops, the following tasks are not affected.
+  - **Use:** JavaScript is synchronous and blocking by default and the web APIs or environment are asynchronous.
+  - **Example:** `see below`
+  ```JavaScript
+  // Function completing tasks synchronously
+  function houseOne() {
+    console.log('Paper delivered to house 1');
+  }
+  function houseTwo() {
+    console.log('Paper delivered to house 2');
+  }
+  function houseThree() {
+    console.log('Paper delivered to house 3');
+  }
+  houseOne();
+  houseTwo();
+  houseThree();
+  // Output -> ...house 1, ...house 2, ...house 3
+
+  // Function completing tasks asynchronously
+  function houseOne() {
+    console.log('Paper delivered to house 1');
+  }
+  function houseTwo() {
+    setTimeout(() => console.log('Paper delivered to house 2'), 0);
+  }
+  function houseThree() {
+    console.log('Paper delivered to house 3');
+  }
+  houseOne();
+  houseTwo();
+  houseThree();
+  // Output -> ...house 1, ...house 3, ...house 2
+  ```
+  - **Source:** https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/
 - [X] What is event loop? What is the difference between call stack and task queue?
   - **Explanation:** JavaScript is a single-threaded, non-blocking synchronous language that contains a call stack, a task queue, and an event loop.
   The call stack is a Last In First Out data structure and the task queue is a First In First Out data structure. 
