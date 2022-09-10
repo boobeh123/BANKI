@@ -726,11 +726,31 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What are the differences between variables created using `let`, `var` or `const`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What are the differences between variables created using `let`, `var` or `const`?
+  - **Explanation & Use:** `let` & `const` are modern block-scoped variable declarations. `const` variables cannot be redeclared or changed through reassignment. `let` variables can be changed through reassignment. `var` is an "old-school" globally-scoped or function-scoped variable declaration. `var` variables are hoisted, visible through code blocks, and can be redeclared & reassigned.
+  - **Example:** `see below`
+  ```JavaScript
+  if (true) {
+    // Hoisted* (Var declared below their use)
+    phrase = "Hello";
+    // Ignores code blocks**
+    phrase2 = "World";
+    // Global variable test
+    var test = true;
+    let test2 = true;
+    const test3 = true;
+    var phrase; // *Declared after the use
+    if (false) {
+      var phrase2; // **conditional not true & variable still declared
+    }
+  }
+  console.log(test);  // Output -> true
+  console.log(phrase);  // Output -> "Hello"
+  console.log(phrase2);  // Output -> "World"
+  console.log(test2); // Output -> ReferenceError: test2 is not defined
+  console.log(test3); // Output -> ReferenceError: test3 is not defined
+  ```
+  - **Source:** https://javascript.info/var
 - [ ] What are the differences between ES6 class and ES5 function constructors?
   - **Explanation:**
   - **Use:**
