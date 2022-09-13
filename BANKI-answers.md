@@ -110,10 +110,10 @@ Don't sell yourself out and say "bootcamp" or "school".
   - **Cause:**
   - **Action:**
   - **Result:**
-- [ ] Tell me about your dream job?  What do you really want to do with your career?
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+- [X] Tell me about your dream job?  What do you really want to do with your career?
+  - **Cause:** At my last company I had the skills required to help folks when their car broke down. 
+  - **Action:** These skills could not lead to greater financial growth until I start a business, acquire my own clients, and grow a fleet.
+  - **Result:** My dream job is to be a software engineer. I'll be able to progress my career through the solutions I build.
 - [ ] Tell me a time when you failed.
   - **Cause:**
   - **Action:**
