@@ -855,11 +855,11 @@ h1, h2, h3, h4, h5, h6 {
 
 ### Node
 
-- [ ] What is Node.js? Where can you use it?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is Node.js? Where can you use it?
+  - **Explanation:** Node.js is an asynchronous event-driven JavaScript runtime designed to build scalable network applications. It is built on Chrome's V8 JavaScript engine.
+  - **Use:** Node allows developers to run JavaScript on Servers, Desktops, and elsewhere.
+  - **Source:** https://nodejs.org/en
+  - **Source2:** https://nodejs.org/en/about/
 - [ ] Why use Node.js?
   - **Explanation:**
   - **Use:**
