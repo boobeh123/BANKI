@@ -293,11 +293,66 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What are the various clearing techniques and which is appropriate for what context?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What are the various clearing techniques and which is appropriate for what context?
+  - **Explanation:** A few techniques used to handle floats are to contain the floated elements within a parent element, using the `clear` property & with the `both` value, and the `.clearfix` hack which does both containing & clearing.
+  - **Use:** It is important that `clear` is applied to an element appearing after the floated elements, not before. Containing floats ensures that the styles will be rendered properly. The outcomes of containing floats versus clearing them are nearly the same.
+  - **Example:** `see below`
+  `Containing floated elements`
+  ```HTML
+    <header></header>
+    <section>
+        <article>float left</article>
+        <aside>float right</aside>
+    </section>
+    <footer></footer>
+  ```
+  ```CSS
+  header, section, article, aside, footer {
+    box-sizing: border-box;
+    border: 2px solid red;
+    height: 200px;
+    text-align: center;
+  }
+  section {
+    border: 0;
+  }
+  article {
+    width: 50%;
+    float: left;
+  }
+  aside {
+    width: 50%;
+    float: right;
+  }
+  ```
+
+  `Clearing an element after floated elements`
+  ```HTML
+    <header></header>
+    <article>float left</article>
+    <aside>float right</aside>
+    <footer>footer</footer>
+  ```
+  ```CSS
+  header, article, aside, footer {
+    box-sizing: border-box;
+    border: 2px solid red;
+    height: 200px;
+    text-align: center;
+  }
+  footer {
+    clear: both;
+  }
+  article {
+    width: 50%;
+    float: left;
+  }
+  aside {
+    width: 50%;
+    float: right;
+  }
+  ```
+  - **Source:** https://learn.shayhowe.com/html-css/positioning-content/#floats
 - [X] Explain CSS sprites, and how you would implement them on a page or site.
   - **Explanation:** The practice of using one background image across multiple elements.
   - **Use:** Spriting images cuts the number of HTTP requests made from using multiple images.
