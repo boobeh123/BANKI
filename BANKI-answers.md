@@ -439,11 +439,25 @@ h1, h2, h3, h4, h5, h6 {
   }
   ```
   - **Source:** https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements 
-- [ ] Explain your understanding of the box model and how you would tell the browser, through CSS, to render your layout in different box models.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Explain your understanding of the box model and how you would tell the browser, through CSS, to render your layout in different box models.
+  - **Explanation&Use:** Every element is a rectangular box and the size of that box is defined by the `width`, `height`, `padding`, `margin`, `border`, and `display` properties of an element. The box model is additive by default and using the `box-sizing` property with a `border-box` value renders layouts a non-additive box model.
+    - **Example:** `see below`
+  ```HTML
+  <div class="withBoxSizing"></div><!--Width = 200pixels (border&padding)-->
+  <div class="noBoxSizing"></div><!--Width = 304pixels (Additive border&padding)-->
+  ```
+  ```CSS
+  .withBoxSizing {
+    box-sizing: border-box;
+  }
+  div {
+    border: 2px solid red;
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+  }
+  ```
+  - **Source:** https://learn.shayhowe.com/html-css/opening-the-box-model/#box-model
 - [X] What does `* { box-sizing: border-box; }` do? What are its advantages?
   - **Explanation:** This declaration alters the box model so that any border or padding property values are included within the width and height of an element. Its advantage allows us to change exactly how the box model works and how an element’s size is calculated.
   - **Use:** If we set an element's width to be 200 pixels and add 5 pixels of padding, the actual width remains 200 pixels.
