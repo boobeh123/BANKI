@@ -259,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
   .clearfix:before,
   .clearfix:after {
     content: "";
-    display: table;
+    `display`: table;
   }
   .clearfix:after {
     clear: both;
@@ -478,16 +478,59 @@ h1, h2, h3, h4, h5, h6 {
   }
   ```
   - **Source:** https://learn.shayhowe.com/html-css/opening-the-box-model/#box-model
-- [ ] What is the CSS `display` property and can you give a few examples of its use?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
-- [ ] What's the difference between `inline` and `inline-block`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is the CSS `display` property and can you give a few examples of its use?
+  - **Explanation:** How elements are displayed is determined by the `display` property & every element has a display property value.
+  - **Use&Examples:** Elements using `display: block` occupy any available width, begin on a new line, and are used in headings and structural elements. 
+  Elements using `display: inline` occupy only the width their content requires, line up on the same line, and are used to be bold or italicize words in content.
+  Element using `display: inline-block` allows the element to accept all box model properties however, the element will be displayed in line with other elements.
+  - **Source:** https://learn.shayhowe.com/html-css/opening-the-box-model/#how-are-elements-displayed
+- [X] What's the difference between `inline` and `inline-block`?
+  - **Explanation:** An element displayed as `inline` cannot have a fixed size and only accepts horizontal margins. An element displayed as `inline-block` allows all box model properties such as `height, width, padding, and margins`.
+  - **Use:** Elements with either `inline` or `inline-block` can both be used to create horizontal menus.
+  - **Example:** `see below`
+  ```HTML
+  <!-- Spans are inline by default -->
+  <nav>
+    <ul>
+      <li>
+        <span>Home</span><!--
+      --><span>About Us</span><!--
+      --><span>Services</span><!--
+      --><span>Contact Us</span>
+      </li>
+    </ul>
+  </nav>
+  <!-- Paragraphs are block by default & display changed to inline-block -->
+  <nav>
+    <ul>
+      <li>
+        <p>Home</p><!--
+        --><p>About Us</p><!--
+        --><p>Services</p><!--
+        --><p>Contact Us</p>
+      </li>
+    </ul>
+  </nav>    
+  ```
+  ```CSS
+  li {
+    margin: 0 5rem;
+    list-style: none;
+  }
+  p {
+    display: inline-block;
+    margin: 0 2rem;
+    /* width declaration does apply inline-block */
+    width: 500px;
+  }
+  span {
+    margin: 0 2rem;
+    /* width declaration does not apply */
+    width: 500px;
+  }
+  ```
+  - **Source:** https://learn.shayhowe.com/html-css/positioning-content/#inline-block
+  - **Source2:** https://learn.shayhowe.com/html-css/opening-the-box-model/#how-are-elements-displayed
 - [ ] What's the difference between a `relative`, `fixed`, `absolute` and `static` positioned element?
   - **Explanation:**
   - **Use:**
