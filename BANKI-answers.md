@@ -531,11 +531,15 @@ h1, h2, h3, h4, h5, h6 {
   ```
   - **Source:** https://learn.shayhowe.com/html-css/positioning-content/#inline-block
   - **Source2:** https://learn.shayhowe.com/html-css/opening-the-box-model/#how-are-elements-displayed
-- [ ] What's the difference between a `relative`, `fixed`, `absolute` and `static` positioned element?
+- [X] What's the difference between a `relative`, `fixed`, `absolute` and `static` positioned element?
   - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+  `static`: Every element has a position value of static, which exists in the normal flow of a document & doesn’t accept box offset properties.
+  `relative`: Allows elements to appear within the normal flow a page, moves an element in relation to itself & other elements are not allowed to move into this space.
+  `absolute`: Elements will not appear within the normal flow of a document, moves an element in relation to their closest relatively positioned parent element & the original space and position will not be preserved.
+  `fixed`: Element will always appear regardless of where a user is on the page, moves an element in relation to the browser viewport, and it does not scroll with the page.
+  - **Use:** A `fixed` element can be used to create a fixed header or footer.
+  - **Source:** https://learn.shayhowe.com/html-css/positioning-content/#uniquely-positioning-elements
+  - **Source2:** https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#position-property
 - [ ] What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
   - **Explanation:**
   - **Use:**
