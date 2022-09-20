@@ -681,11 +681,23 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Explain "hoisting".
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Explain "hoisting".
+  - **Explanation:**  `var` Declarations are processed when the function starts & are defined from the beginning of the function, no matter where the definition is.
+  - **Use:** Using `var` can allow code to execute before it is defined.
+  - **Example:** `see below`
+  ```JavaScript
+  function sayHi() {
+    // The phrase variable reassigned to contain a string value
+    phrase = "Hello";
+    // Executes the alert() method to display the value stored in the greet variable
+    alert(phrase);
+    // The initial declaration of the phrase variable. It is declared after it is used in the alert() method.
+    var phrase;
+  }
+  // Invokes the sayHi() function.
+  sayHi();
+  ```
+  - **Source:** https://javascript.info/var#var-variables-can-be-declared-below-their-use
 - [ ] Describe event bubbling.
   - **Explanation:**
   - **Use:**
