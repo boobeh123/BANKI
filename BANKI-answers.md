@@ -938,10 +938,32 @@ h1, h2, h3, h4, h5, h6 {
   - **Example:**
   - **Source:**
 - [ ] How can you share code between files?
-  - **Explanation:**
-  - **Use:**
+  - **Explanation:** Code that runs in the browser uses `ES6` modules. Modules are defined with an `export` and taken into use with an `import` at the beginning of the file. NodeJS, `require()` is a built-in function to include external modules that exist in separate files.
+  - **Use:** I have used `export` & `require` syntax to hide login credentials to my database. 
+  - **Example:** `see below` The config.js file is set to be ignored by a `.gitignore` file and exports the secret key within the variable `connectionString`. The server.js file includes this variable by using the `require()` syntax.
+  ```JavaScript
+  // .gitignore
+  config.js
+
+  // Config.js
+  exports.connectionString = 'mongodb+srv://<username>:<password>@<clusername>.abc987.mongodb.net/?retryWrites=true&w=majority'
+  
+  // Server.js
+  const mongoAtlasLogin = require('./config.js');
+  DB_STRING = mongoAtlasLogin.connectionString;
+  ```
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
+    - **Explanation:** With ES6 modules via the `import ... export` syntax. Prior to ES6 modules you could use Asynchronous Module Definition for the client side scripts or CommonJS for server side scripts.
+  - **Use:** To better organize and abstract code bases.
   - **Example:**
-  - **Source:**
+
+```javascript
+// file square.js
+export { name, draw, reportArea, reportPerimeter };
+
+// file index.js
+import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+```
 - [ ] Why you might want to create static class members?
   - **Explanation:**
   - **Use:**
