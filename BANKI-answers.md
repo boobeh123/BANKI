@@ -953,17 +953,6 @@ h1, h2, h3, h4, h5, h6 {
   DB_STRING = mongoAtlasLogin.connectionString;
   ```
   - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
-    - **Explanation:** With ES6 modules via the `import ... export` syntax. Prior to ES6 modules you could use Asynchronous Module Definition for the client side scripts or CommonJS for server side scripts.
-  - **Use:** To better organize and abstract code bases.
-  - **Example:**
-
-```javascript
-// file square.js
-export { name, draw, reportArea, reportPerimeter };
-
-// file index.js
-import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
-```
 - [ ] Why you might want to create static class members?
   - **Explanation:**
   - **Use:**
