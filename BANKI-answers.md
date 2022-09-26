@@ -389,11 +389,49 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Have you used or implemented media queries or mobile specific layouts/CSS?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Have you used or implemented media queries or mobile specific layouts/CSS?
+  - **Explanation:** I use media queries in every project I have built so far and I know about the mobile-first approach when building the layout.
+  - **Use:** The mobile first approach includes using styles targeted at smaller viewports as the default styles for a website, then use media queries to add styles as the viewport grows.
+  - **Example:** `see below` The default style has block elements taking the full width of its container, stacked vertically on one another. The media query activates for wider viewports and reduces the width of the contained elements. It floats each contained element in opposite directions to create a new layout.
+  ```HTML
+  <div class="clearfix">
+    <section></section>
+    <aside></aside>
+  </div>
+  ```
+
+  ```CSS
+  section,
+  aside {
+    background: yellow;
+    color: #fff;
+    margin: .25rem;
+    padding: .5rem;
+    text-align: center;
+  }
+  @media screen and (min-width: 525px) {
+    section {
+      float: left;
+      width: 60%;
+    }
+    aside {
+      float: right;
+      width: 25%
+    }
+  }
+  .clearfix:before,
+  .clearfix:after {
+    content: "";
+    display: table;
+  }
+  .clearfix:after {
+    clear: both;
+  }
+  .clearfix {
+    background-color: black;
+  }
+  ```
+  - **Source:** https://learn.shayhowe.com/advanced-html-css/responsive-web-design/
 - [ ] Are you familiar with styling SVG?
   - **Explanation:**
   - **Use:**
@@ -937,7 +975,7 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] How can you share code between files?
+- [X] How can you share code between files?
   - **Explanation:** Code that runs in the browser uses `ES6` modules. Modules are defined with an `export` and taken into use with an `import` at the beginning of the file. NodeJS, `require()` is a built-in function to include external modules that exist in separate files.
   - **Use:** I have used `export` & `require` syntax to hide login credentials to my database. 
   - **Example:** `see below` The config.js file is set to be ignored by a `.gitignore` file and exports the secret key within the variable `connectionString`. The server.js file includes this variable by using the `require()` syntax.
