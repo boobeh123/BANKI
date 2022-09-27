@@ -431,17 +431,28 @@ h1, h2, h3, h4, h5, h6 {
     background-color: black;
   }
   ```
-  - **Source:** https://learn.shayhowe.com/advanced-html-css/responsive-web-design/
+  - **Source:** https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#media-queries
 - [ ] Are you familiar with styling SVG?
   - **Explanation:**
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Can you give an example of an `@media` property other than screen?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Can you give an example of an `@media` property other than screen?
+  - **Explanation:**The default media type is `screen` and a few other common media types are `all` and `print`.
+  - **Use:** `see below`
+  The `all` media type is suitable for all devices. 
+  The `print` media type is intended for paged material and documents viewed on a screen in print preview mode. 
+  The `screen` media type is untended primarily for screens.
+  - **Example:** `see below` The media query below activates on screens in print preview mode & changes the font-size of text within the `body` tag.
+  ```CSS
+  @media print {
+    body {
+      font-size: 10pt;
+    }
+  }
+  ```
+  - **Source:** https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#media-queries
+  - **Source2:** https://developer.mozilla.org/en-US/docs/Web/CSS/@media
 - [ ] What are some of the "gotchas" for writing efficient CSS?
   - **Explanation:**
   - **Use:**
