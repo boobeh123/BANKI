@@ -647,11 +647,24 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What's the difference between a variable that is: `null`, `undefined` or undeclared? How would you go about checking for any of these states?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What's the difference between a variable that is: `null`, `undefined` or undeclared? How would you go about checking for any of these states?
+  - **Explanation:** `null` & `undefined` are used to denote the absence of a meaningful value. `undeclared` is an improper variable declaration.
+  - **Use:** `null` & `undefined` are values and can be checked using the `equality ( == )` or `strict eqaulity ( === )` operator. `undeclared` will throw a ReferenceError. 
+  - **Example:** `see below`
+  ```JavaScript
+  // checking for undefined or null
+  const a = undefined;
+  const b = null;
+  console.log(a === undefined); // true
+  console.log(b === null);      // true
+  console.log(a == b);          // true
+  console.log(a === b);         // false
+
+  // undeclared
+  const c = hello;  // ReferenceError: hello is not defined
+  console.log(c)    // Doesn't run due to error above
+  ```
+  - **Source:** https://eloquentjavascript.net/01_values.html#h_FewqJ8K2E+
 - [X] What is a closure, and how/why would you use one?
   - **Explanation:** An inner function that has access to the outer function.
   - **Use:** Converting properties/methods into local variables, hiding it from the public interface.
