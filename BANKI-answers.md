@@ -675,11 +675,18 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What's a typical use case for anonymous functions?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What's a typical use case for anonymous functions?
+  - **Explanation:** I have used anonymous functions with the `event` parameter inside of an `Eventlistener` to access the `keyboardEvent` object.
+  - **Use:** I access the `event` object & compare the `key` property-value to the value `"Escape"`. If this statement evaluates as true, I invoke a function that closes the current interface.
+  - **Example:** `see below`
+  ```JavaScript
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+  ```
+  - **Source:** [Personal-use](https://github.com/boobeh123/Trainer-Treats/blob/master/public/js/main.js)
 - [ ] How do you organize your code? (module pattern, classical inheritance?)
   - **Explanation:**
   - **Use:**
