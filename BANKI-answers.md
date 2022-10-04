@@ -797,11 +797,41 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Make this work: `duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5] `
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Make this work: `duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5] `
+  - **Explanation:** 
+  I created a function that takes in 1 parameter. 
+  This function will return an array of numbers. 
+  As an example, we are given `[1,2,3,4,5]`. This function should return `[1,2,3,4,5,1,2,3,4,5]`
+  In the function below, 
+  I declared a variable containing an empty array. This array will store elements from the array argument.
+  I iterated through the array argument using the `map()` method and used type coercion on every element in the array argument. 
+  I used the `String()` constructor to convert every element from a number to a string.
+  I stored every element from the array argument into the variable containing an array.
+  I used the `join('')` method to convert the variable containing an array to a string.
+  I used the `repeat()` method and specify the amount of copies that duplicate the converted-string & concatenates the string.
+  I used the `split('')` method to convert the string back to an array of strings.
+  I iterated through the array of strings using the `map()` method and used type coercion on every element in the array argument.
+  I used the `Number()` constructor to convert every element from a string to a number.
+  - **Use & Example:** `see below`
+  ```JavaScript
+  function duplicate(array) {
+    let arrayOfStrings = [];
+
+    array.map((element) => {
+      arrayOfStrings.push(String(element));
+    })
+
+    return arrayOfStrings.join('').repeat(2).split('').map((element) => Number(element));
+  }
+  const exampleOne = duplicate([1,2,3,4,5]);
+  console.log(exampleOne);
+  ```
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+  - **Source2:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/String
+  - **Source3:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+  - **Source4:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
+  - **Source5:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+  - **Source6:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number
 - [ ] Why is it called a ternary expression, what does the word "ternary" indicate?
   - **Explanation:**
   - **Use:**
