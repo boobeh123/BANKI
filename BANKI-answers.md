@@ -832,11 +832,20 @@ h1, h2, h3, h4, h5, h6 {
   - **Source4:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
   - **Source5:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
   - **Source6:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number
-- [ ] Why is it called a ternary expression, what does the word "ternary" indicate?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Why is it called a ternary expression, what does the word "ternary" indicate?
+  - **Explanation:** Ternary means `operating on three values` and it is a logical operator that takes three operands.
+  - **Use:** Ternary operators can be used as an alternative to an `if...else` statement.
+  - **Example:** `see below`
+  ```JavaScript
+  function isEven(number) {
+    return number % 2 === 0 ? true : false
+  }
+  const exampleOne = isEven(2);
+  const exampleTwo = isEven(3);
+  console.log(exampleOne);  // true
+  console.log(exampleTwo);  // false
+  ```
+  - **Source:** https://eloquentjavascript.net/01_values.html#p_EWJu4coIAh
 - [ ] What is "use strict";? what are the advantages and disadvantages to using it?
   - **Explanation:**
   - **Use:**
