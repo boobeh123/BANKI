@@ -807,7 +807,7 @@ h1, h2, h3, h4, h5, h6 {
   I iterated through the array argument using the `map()` method and used type coercion on every element in the array argument. 
   I used the `String()` constructor to convert every element from a number to a string.
   I stored every element from the array argument into the variable containing an array.
-  I used the `join('')` method to convert the variable containing an array to a string.
+  I used the `join('')` method to concatenate every element from the array to a string.
   I used the `repeat()` method and specify the amount of copies that duplicate the converted-string & concatenates the string.
   I used the `split('')` method to convert the string back to an array of strings.
   I iterated through the array of strings using the `map()` method and used type coercion on every element in the array argument.
