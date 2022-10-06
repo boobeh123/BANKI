@@ -846,11 +846,24 @@ h1, h2, h3, h4, h5, h6 {
   console.log(exampleTwo);  // false
   ```
   - **Source:** https://eloquentjavascript.net/01_values.html#p_EWJu4coIAh
-- [ ] What is "use strict";? what are the advantages and disadvantages to using it?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is "use strict";? what are the advantages and disadvantages to using it?
+  - **Explanation:** A statement added to the beginning of source code which enables the use of a restricted variant of JavaScript. 
+  - **Use:** One advantage is it eliminates silent errors by changing them to throw errors. One disadvantage is it prohibits some syntax likely to be defined in future versions of ECMAScript.
+  - **Example:** `see below`
+  ```JavaScript
+  'use strict';
+  let mistypeVariable;
+  mistypeVarible = 0; // ReferenceError: mistypeVarible is not defined
+  console.log(mistypeVariable); // Does not print due to error above
+  console.log(mistypeVarible);  // Does not print due to error above
+  ```
+  ```JavaScript
+  let mistypeVariable;
+  mistypeVarible = 0; // 0
+  console.log(mistypeVariable); // Undefined
+  console.log(mistypeVarible);  // 0
+  ```
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 - [X] Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5
   - **Explanation:** I initialize this for loop by declaring a variable named `i` and set its value to `1`. I set the stopping condition when `i` is `less than or equal to 100`. My final expression is to increment the value stored inside of `i` by one on every iteration.
   - **Use:** I start the for loop at 1 because 0 will print `"fizzbuzz"` to the console on the first iteration. The stopping condition is `<= 100` so the loop does not stop when `i = 99`. The final expression increments the value of `i` so I am eventually able to escape this loop and prevent an infinite loop.
