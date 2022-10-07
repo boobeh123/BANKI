@@ -970,11 +970,27 @@ h1, h2, h3, h4, h5, h6 {
   The event loop runs tasks in the call stack first and when the stack is empty the event loop picks up tasks from the task queue and moves those tasks to the call stack to be run.
   - **Source:** [Philip Roberts: The Event Loop JSConf](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
   - **Source2:** [Jake Archibald: In The Loop JSConf](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
-- [ ] Explain the differences on the usage of foo between `function foo() {}` and `var foo = function() {}`
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Explain the differences on the usage of foo between `function foo() {}` and `var foo = function() {}`
+  - **Explanation:** The first uses foo as a function declaration and the second uses foo as a function expression. 
+  - **Use:** Function declarations may use the hoisting feature in JavaScript, which allows access to function declarations before they’re defined. Function expressions may omit the function's name & is called an anonymous function. Function expressions may not use the hosting feature.
+  - **Example:** `see below`
+  ```JavaScript
+  // Function declaration - hoisting feature used
+  foo();  // Output -> 'Hello world'
+
+  function foo() {
+    return "Hello world";
+  }
+  ```
+  ```JavaScript
+  // Function expression - function name omitted
+  const bar = function() {
+    return "Olleh dlrow";
+  }
+  bar();  // Output -> 'Olleh dlrow'
+  ```
+  - **Source:** https://www.codecademy.com/courses/introduction-to-javascript/lessons/functions/exercises/function-declaration
+  - **Source2:** https://www.codecademy.com/courses/introduction-to-javascript/lessons/functions/exercises/function-expressions
 - [X] What are the differences between variables created using `let`, `var` or `const`?
   - **Explanation & Use:** `let` & `const` are modern block-scoped variable declarations. `const` variables cannot be redeclared or changed through reassignment. `let` variables can be changed through reassignment. `var` is an "old-school" globally-scoped or function-scoped variable declaration. `var` variables are hoisted, visible through code blocks, and can be redeclared & reassigned.
   - **Example:** `see below`
