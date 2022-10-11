@@ -1060,8 +1060,8 @@ h1, h2, h3, h4, h5, h6 {
   - **Example:**
   - **Source:**
 - [X] ES6 Template Literals offer a lot of flexibility in generating strings, can you give an example?
-  - **Explanation:** Template literals offer a readable way to perform string interpolation by concatenating variables with placeholders.
-  - **Use:** A template string is created by delimiting the string with backtick characters ` (``) `. A template string may contain placeholders, which are embedded expressions delimited by a dollar sign & curly braces ` ${expression} `
+  - **Explanation:** Template literals offer a readable way to perform string interpolation by concatenating expression with placeholders.
+  - **Use:** A template string is created by delimiting the string with backtick characters ` (``) `. A template string may contain placeholders, which are embedded expressions delimited by a dollar sign & curly braces ` ${expression} `.
   - **Example:** `see below`
   ```JavaScript
   // Template literals with placeholders
