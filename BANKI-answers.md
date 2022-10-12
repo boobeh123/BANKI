@@ -102,10 +102,10 @@ Don't sell yourself out and say "bootcamp" or "school".
   - **Cause:**
   - **Action:**
   - **Result:**
-- [ ] Why do you want to work for us?
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+- [X] Why do you want to work for us?
+  - **Cause:** This company is the company I want to work at.
+  - **Action:** This is where I want to be and where I want to grow.
+  - **Result:** This decision affects me & my family for the next five years.
 - [X] Why are you interested in this opportunity?
   - **Cause:** This company is the company I want to work at.
   - **Action:** This is where I want to be and where I want to grow.
