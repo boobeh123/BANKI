@@ -156,11 +156,100 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What are `data-` attributes good for?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What are `data-` attributes good for?
+  - **Explanation:** Allows extra information to be stored and exchanged between the HTML and its DOM representation. 
+  - **Use:** I have used the `data-*` attribute as part of a `PUT` (& `DELETE`) request in a to-do-list program. 
+  A `<span>` element is given an eventlistener and when clicked, it moves up to the parent element and grabs the `data-*` attribute and compares it to the `_id` property within MongoDB.
+  - **Example:** `see below`
+  ```HTML
+  <!-- todos.ejs -->
+  <ul>
+    <% todos.forEach( el => { %>
+      <!-- Store _id from MongoDB onto data attribute -->
+      <li class='todoItem' data-id='<%=el._id%>'>
+        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+        <span class='del'> Delete </span>
+      </li>
+    <% }) %>    
+  </ul>
+  ```
+  ```JavaScript
+  // main.js - Public
+  const todoComplete = document.querySelectorAll('span.completed')
+  Array.from(todoItem).forEach((el)=>{
+    el.addEventListener('click', markComplete)
+  })
+  async function markComplete(){
+    // const todoId = this.parentNode.childNodes[5].innerText // -> Grabs <span>, moves up to the <li>, moves to a specific node -> Grabs text
+    const todoId = this.parentNode.dataset.id // Grabs <span>, moves up to the <li>, searches for _id from EJS & grabs text
+    try{
+      const response = await fetch('todos/markComplete', {
+        method: 'put',
+        headers: {'Content-type': 'application/json'},
+        body: JSON.stringify({
+        'todoIdFromJSFile': todoId
+        })
+      })
+      const data = await response.json()
+      console.log(data)
+      location.reload()
+    }catch(err){
+      console.log(err)
+    }
+  }
+  // server.js
+  app.use('/todos', todoRoutes)
+  // todos.js - Router
+  const express = require('express')
+  const router = express.Router()
+  const todosController = require('../controllers/todos')
+  router.get('/', todosController.getTodos)
+  router.put('/markComplete', todosController.markComplete)
+  // todos.js - Controller
+  const Todo = require('../models/Todo')
+  module.exports = {
+    getTodos: async (req,res)=>{
+      try{
+        const todoItems = await Todo.find()
+        const itemsLeft = await Todo.countDocuments({completed: false})
+        res.render('todos.ejs', {todos: todoItems, left: itemsLeft})
+      }catch(err){
+        console.log(err)
+      }
+    },
+    markComplete: async (req, res)=>{
+      try{
+        await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
+          completed: true
+          })
+          console.log('Marked Complete')
+          res.json('Marked Complete')
+      }catch(err){
+          console.log(err)
+      }
+    }
+  }
+  // Todo.js - Model
+  const mongoose = require('mongoose')
+  const TodoSchema = new mongoose.Schema({
+    todo: {
+      type: String,
+      required: true,
+    },
+    completed: {
+      type: Boolean,
+      required: true,
+    }
+  })
+  module.exports = mongoose.model('Todo', TodoSchema)
+  // MongoDB - test database, todos collection
+  _id: ObjectId('634498c1a562520b28bd2a98')
+  todo: "test"
+  completed: false
+  __v: 0
+  ```
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*
+  - **Source2:** https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 - [ ] Consider HTML5 as an open web platform. What are the building blocks of HTML5?
   - **Explanation:**
   - **Use:**
