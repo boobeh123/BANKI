@@ -255,7 +255,7 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Describe the difference between a cookie, sessionStorage and localStorage.
+- [X] Describe the difference between a cookie, sessionStorage and localStorage.
   - **Explanation:** Local & session storage are web storage objects saved in the browser and are not sent to a server. Cookies are small pieces of data that are stored in the browser and sent back to a server.
   - **Use:** The web objects saved from local storage doesn't expire & the data from sessionStorage is cleared when the page session ends. Cookies are used in session management, tracking, and personalization. 
   - **Example:** I can set a web storage object using `localStorage.name = John;`, I can get the object using `console.log(localStorage.name);` and remove the object using `delete localStorage.name;`
@@ -282,11 +282,21 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Have you used different HTML templating languages before?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Have you used different HTML templating languages before?
+  - **Explanation:** Yes, I have used `EJS` in a few of my projects to display variable data from MongoDB.
+  - **Use:** I have used the scriplet tag (`<%`) & the plain ending tag (`%>`) to iterate through my collection. I then used both (`<%=`) & (`%>`) tags to output document values.
+  - **Example:** `see below`
+  ```HTML
+  <!-- index.ejs -->
+  <% for(let i = 0; i < quotes.length; i++) {%>
+    <li class="quote">
+      <span><%= quotes[i].name %></span>
+      <span><%= quotes[i].quote %></span>
+    </li>
+  <% } %>
+  ```
+  - **Source:** https://ejs.co/
+  - **Source2:** https://github.com/boobeh123/Motivational-quotes-CRUD/blob/master/views/index.ejs
 
 ### CSS
 
