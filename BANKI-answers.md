@@ -468,11 +468,31 @@ h1, h2, h3, h4, h5, h6 {
   }
   ```
   - **Source:** https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests
-- [ ] How would you approach fixing browser-specific styling issues?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] How would you approach fixing browser-specific styling issues?
+  - **Explanation:** Every web browser has its default styles and I would use either a reset or normalize stylesheet to ensure cross-browser compatibility.
+  - **Use:** I can use a reset stylesheet to reduce browser inconsistencies or a normalize stylesheet to set elements with modern standards.
+  - **Example:** `see below`
+`Reset:`
+```CSS
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+```
+`Normalize:`
+```CSS
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+```
+  - **Source:** https://learn.shayhowe.com/html-css/building-your-first-web-page/#using-css-resets
+  - **Source2:** https://meyerweb.com/eric/tools/css/reset/
+  - **Source3:** https://necolas.github.io/normalize.css/
 - [ ] How do you serve your pages for feature-constrained browsers? What techniques/processes do you use?
   - **Explanation:**
   - **Use:**
