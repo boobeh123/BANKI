@@ -718,11 +718,24 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?
+  - **Explanation:** A responsive website is suitable to work on every device and screen size. The mobile-first strategy is targeted at smaller viewports as the default styles, then use media queries to add styles as the viewport grows. 
+  - **Use:** Both are responsive and the difference is responsive is determined after a website is complete, mobile-first is used while a website is in development. 
+  - **Example:** `see below`
+  ```CSS
+  /* mobile first - Default background */
+  body {
+    background: #ddd;
+  }
+  /* Background as viewport grows */
+  @media screen and (min-width: 768px) {
+    body {
+      background-image: url("bg.png") 50% 50% no-repeat;
+    }
+  }
+  ```
+  - **Source:** https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design
+  - **Source:** https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#mobile-first
 - [ ] How is responsive design different from adaptive design?
   - **Explanation:**
   - **Use:**
