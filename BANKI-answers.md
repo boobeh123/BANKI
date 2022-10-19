@@ -498,11 +498,27 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What are the different ways to visually hide content (and make it available only for screen readers)?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What are the different ways to visually hide content (and make it available only for screen readers)?
+  - **Explanation:** Best practice is to use the global `hidden` boolean attribute, which is available to all elements for use. Another way is to use the `display` property with the `none` value, but it is semantically incorrect. 
+  - **Use:** Screen readers will temporarily skip an element that uses the `hidden` attribute. This can be used to hide a success message until an action is completed.
+  - **Example:** `see below`
+  ```HTML
+  <!-- Semantic -->
+  <div hidden>
+    <p>Success</p>
+  </div>
+
+  <!-- Not semantic-->
+  <div class="useDisplay">
+    <p>Success</p>
+  </div>
+  ```
+  ```CSS
+  .useDisplay {
+    display: none;
+  }
+  ```
+  - **Source:** https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/
 - [ ] Have you ever used a grid system, and if so, what do you prefer?
   - **Explanation:**
   - **Use:**
