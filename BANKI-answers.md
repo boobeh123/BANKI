@@ -389,10 +389,13 @@ h1, h2, h3, h4, h5, h6 {
   - **Source:** https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property
 - [X] Describe BFC (Block Formatting Context) and how it works.
   - **Explanation:** A part of a visual CSS rendering of a web page. It's the region in which the layout of block boxes occurs and in which floats interact with other elements.
-  - **Use & Example:** A BFC is created by at least one of the following: `see below`
-    - Floats (elements where value isn't `none`.)
-    - Display (elements with value of `inline-block`, `flex`, `grid`, & more.)
-    - Overflow (elements has a value other than `visible` and `clip`.)
+  - **Use:** An element that establishes a new block formatting context will contain internal floats, exclude external floats, and suppress margin collapsing.
+  - **Example:** A BFC is created by at least one of the following: `see below`
+  ```
+  - Floats (elements where value isn't `none`.)
+  - Display (elements with value of `inline-block`, `flex`, `grid`, & more.)
+  - Overflow (elements has a value other than `visible` and `clip`.)
+  ```
   - **Source:** https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 - [X] What are the various clearing techniques and which is appropriate for what context?
   - **Explanation:** A few techniques used to handle floats are to contain the floated elements within a parent element, using the `clear` property & with the `both` value, and the `.clearfix` hack which does both containing & clearing.
