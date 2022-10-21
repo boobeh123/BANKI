@@ -599,10 +599,56 @@ h1, h2, h3, h4, h5, h6 {
   - **Example:**
   - **Source:**
 - [ ] What are the advantages/disadvantages of using CSS preprocessors?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+  - **Explanation:** Preprocessors help remove inefficiencies and contain ways to build websites easily and logically. Preprocessors have a learning curve with their syntax.
+  - **Use:** Haml promotes DRY concepts, well structured markup and make writing code easier. Sass requires less characters and provide a cleaner syntax.
+  - **Example:** `see below`
+  ```Ruby
+  # HAML
+  %body
+    %header
+      %h1 Hello World
+    %section
+      %p Lorem ipsum dolor sit amet.
+  ```
+  ```HTML
+  <!-- Compiled HTML -->
+  <body>
+    <header>
+      <h1>Hello World</h1>
+    </header>
+    <section>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </section>
+  </body>
+  ```
+  ```Ruby
+  # SCSS
+  .new {
+    color: red;
+    font-weight: bold;
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  # SASS
+  .new
+    color: red
+    font-weight: bold
+    span
+      text-transform: uppercase
+  ```
+  ```CSS
+  /* Compiled CSS */
+  .new {
+    color: #ff7b29;
+    font-weight: bold;
+  }
+  .new span {
+    text-transform: uppercase;
+  }
+  ```
+  - **Source:** https://learn.shayhowe.com/advanced-html-css/preprocessors/
 - [ ] Describe what you like and dislike about the CSS preprocessors you have used.
   - **Explanation:**
   - **Use:**
