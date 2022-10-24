@@ -649,11 +649,48 @@ h1, h2, h3, h4, h5, h6 {
   }
   ```
   - **Source:** https://learn.shayhowe.com/advanced-html-css/preprocessors/
-- [ ] Describe what you like and dislike about the CSS preprocessors you have used.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Describe what you like and dislike about the CSS preprocessors you have used.
+  - **Explanation:** I like that child-selectors can be nested inside a parent-selector and that Sass can be converted to SCSS and vice versa. I dislike that the command line must be used to compile files for markup & styling.
+  - **Use:** When declaring a rule, a parent selector can have declarations and nest a child selector within its declaration block. When compiling a `.scss` or `.sass` file into a `.css` file, a sass command must be called from the command line.
+  - **Example:** `see below`
+  ```Ruby
+  # Sass command to compile .sass files to a .css file
+  sass styles.sass styles.css
+
+  # Command to convert Sass to SCSS
+  sass-convert styles.sass styles.scss
+
+  # Command to convert SCSS to Sass
+  sass-convert styles.scss styles.sass
+
+  # Nesting child-selectors within a parent-selector
+  # SCSS
+    .new {
+    color: red;
+    font-weight: bold;
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  # SASS
+  .new
+    color: red
+    font-weight: bold
+    span
+      text-transform: uppercase
+  ```
+  ```CSS
+  /* Compiled CSS */
+  .new {
+    color: red;
+    font-weight: bold;
+  }
+  .new span {
+    text-transform: uppercase;
+  }
+  ```
+  - **Source:** https://learn.shayhowe.com/advanced-html-css/preprocessors/
 - [ ] How would you implement a web design comp that uses non-standard fonts?
   - **Explanation:**
   - **Use:**
