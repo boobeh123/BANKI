@@ -696,11 +696,29 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Explain how a browser determines what elements match a CSS selector.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Explain how a browser determines what elements match a CSS selector.
+  - **Explanation:** The `key selector` determines which element the styles will be applied to and every selector has a specificity weight which identifies how its styles will be rendered.
+  - **Use:** Using combined selectors should be read from right to left and selectors with higher specificity weight has more superiority when a styling conflict occurs.
+  - **Example:** `see below`
+  ```HTML
+  <section class="container">
+    <h2>Hello world</h2>
+  </section>
+  ```
+  ```CSS
+  /* h2 is the Key selector & .container is the prequalifier of a combined selector */
+  .container h2 {
+    color: #fefefe;
+    font-family: 'Times New Roman';
+  }
+
+  /* section h2 has less specificity weight than .container h2. The styles of section h2 will not be rendered. */
+  section h2 {
+    color: #000;
+  }
+  ```
+  - **Source:** https://learn.shayhowe.com/html-css/getting-to-know-css/#combining-selectors
+  - **Source2:** https://learn.shayhowe.com/html-css/getting-to-know-css/#specificity
 - [X] Describe pseudo-elements and discuss what they are used for.
   - **Explanation:** A pseudo-element is a keyword added to a selector that allows a specific part of the selected element(s) to be styled.
   - **Use:** I can target an `input` element's `::placeholder` pseudo-element and change the opacity of the text displayed in the input.
