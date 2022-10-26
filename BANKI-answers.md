@@ -691,11 +691,39 @@ h1, h2, h3, h4, h5, h6 {
   }
   ```
   - **Source:** https://learn.shayhowe.com/advanced-html-css/preprocessors/
-- [ ] How would you implement a web design comp that uses non-standard fonts?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] How would you implement a web design comp that uses non-standard fonts?
+  - **Explanation:** I use Google Fonts and link the font within my `HTML` to use & render fonts that are not installed on a computer. Another way would be to upload fonts to a server and include them on a website.
+  - **Use:** The `font-family` property is used to declare which font should be used to display text.  The `@font-face` at rule can also be used to declare fonts.
+  - **Example:** `see below`
+  ```HTML
+  <!-- Linking Google Font -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  </body>
+  ```
+  ```CSS
+  /* Declaring a font with font-family rule */
+  body {
+    font-family: Roboto, 'sans-serif';
+  }
+
+  /* Declaring a font with @font-face at-rule */
+  @font-face {
+    font-family: "Lobster";
+    src: local("Lobster"), url("lobster.woff") format("woff");
+  }
+  body {
+    font-family: "Lobster", "sans-serif";
+  }
+  ```
+  - **Source:** https://learn.shayhowe.com/html-css/working-with-typography/
 - [X] Explain how a browser determines what elements match a CSS selector.
   - **Explanation:** The `key selector` determines which element the styles will be applied to and every selector has a specificity weight which identifies how its styles will be rendered.
   - **Use:** Using combined selectors should be read from right to left and selectors with higher specificity weight has more superiority when a styling conflict occurs.
