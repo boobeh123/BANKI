@@ -858,11 +858,30 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:** A `fixed` element can be used to create a fixed header or footer.
   - **Source:** https://learn.shayhowe.com/html-css/positioning-content/#uniquely-positioning-elements
   - **Source2:** https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#position-property
-- [ ] What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+  - **Explanation:** `MaterializeCSS` is the first CSS framework I have used locally and `Bootstrap` is the first CSS framework I've used in production. It would cool if the documentation provided the code to create their components without using the framework.
+  - **Use:** Once the packages are installed, the script source and stylesheets are linked, using a component is done by applying a class to an HTML element.
+  - **Example:** `see below`
+  ```
+  Terminal:
+  npm install materialize-css
+  ```
+  ```HTML
+  <!-- Linking stylesheet & script source -->
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    </head>
+    <body>
+      <!-- A button component -->
+      <a class="waves-effect waves-light btn">button</a>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>
+  ```  
+  - **Source:** https://materializecss.com/getting-started.html
+  - **Source2:** https://getbootstrap.com/docs/5.2/getting-started/introduction/
 - [ ] Have you played around with the new CSS Flexbox or Grid specs?
   - **Explanation:**
   - **Use:**
