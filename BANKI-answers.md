@@ -882,11 +882,36 @@ h1, h2, h3, h4, h5, h6 {
   ```  
   - **Source:** https://materializecss.com/getting-started.html
   - **Source2:** https://getbootstrap.com/docs/5.2/getting-started/introduction/
-- [ ] Have you played around with the new CSS Flexbox or Grid specs?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Have you played around with the new CSS Flexbox or Grid specs?
+  - **Explanation:** I have used flexbox in projects to vertically or horizontally position elements at the start, middle, or end of a page.
+  - **Use:** I use apply the `display: flex` declaration on a parent element, then apply the `justify-content`, `flex-direction`, or `align-items` declarations to move the children elements contained within the parent element.
+  - **Example:** `see below`
+  ```HTML
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  ```
+  ```CSS
+  /* Positioning elements in the middle of a page, vertically & horizontally */
+  div {
+      border: 2px solid red;
+      height: 50px;
+      width: 100px
+  }
+  .container {
+      height: 500px;
+      width: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  ```
+  - **Source:** https://learnlayout.com/flexbox.html
+  - **Source2:** https://www.freecodecamp.org/news/css-flexbox-tutorial-with-cheatsheet/
+  - **Source3:** https://flexboxfroggy.com/
+  - **Source4:** https://mastery.games/flexboxzombies/
 - [X] Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?
   - **Explanation:** A responsive website is suitable to work on every device and screen size. The mobile-first strategy is targeted at smaller viewports as the default styles, then use media queries to add styles as the viewport grows. 
   - **Use:** Both are responsive and the difference is responsive is determined after a website is complete, mobile-first is used while a website is in development. 
