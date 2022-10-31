@@ -996,11 +996,23 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:** Converting properties/methods into local variables, hiding it from the public interface.
   - **Example:** Declaring a local variable in the outer function and calling the variable in the inner function. 
   - **Source:** https://youtu.be/PFmuCDHHpwk?t=2867 (Object-oriented Programming in JavaScript: Made Super Simple by Mosh Hamedani)
-- [ ] Can you describe the main difference between a `.forEach()` loop and a `.map()` loop and why you would pick one versus the other?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Can you describe the main difference between a `.forEach()` loop and a `.map()` loop and why you would pick one versus the other?
+  - **Explanation:** 
+  A similarity is `.forEach()` and `.map()` both iterate over an array and execute a provided function on every element within the array. 
+  The difference is that `forEach()` applies the provided function and does not return anything. `map()` applies the provided function and return a new array of the same size containing the mutated elements. 
+  - **Use:** `map()` does not mutate the original array when applying the provided function.
+  - **Example:** `see below`
+  ```JavaScript
+  let arrayOfLetters = ['a', 'b', 'c'];
+  // Map
+  arrayOfLetters.map((element) => element.toUpperCase());                  // Output -> ['A', 'B', 'C']
+
+  // forEach
+  arrayOfLetters.forEach((element) => element.toUpperCase());              // Output -> Undefined
+  arrayOfLetters.forEach((element) => console.log(element.toUpperCase())); // Output -> 'A' 'B' 'C'
+  ```
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 - [X] What's a typical use case for anonymous functions?
   - **Explanation:** I have used anonymous functions with the `event` parameter inside of an `Eventlistener` to access the `keyboardEvent` object.
   - **Use:** I access the `event` object & compare the `key` property-value to the value `"Escape"`. If this statement evaluates as true, I invoke a function that closes the current interface.
