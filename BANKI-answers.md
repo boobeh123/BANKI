@@ -1025,11 +1025,34 @@ h1, h2, h3, h4, h5, h6 {
   });
   ```
   - **Source:** [Personal-use](https://github.com/boobeh123/Trainer-Treats/blob/master/public/js/main.js)
-- [ ] How do you organize your code? (module pattern, classical inheritance?)
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] How do you organize your code? (module pattern, classical inheritance?)
+  - **Explanation:** I use `seperation of concern` principles and `model-view-controller` architectural patterns to organize my codebase.
+  - **Use:** I seperate my HTML, CSS, & JavaScript and do not write CSS in my HTML and vice versa. When creating full-stack applications I seperate functionalities of my application into logical segments. The server-side logic will be in my router & controllers, the storage and database code will be in my model, and front-end related code will be in my views.
+  - **Example:** `see below`
+  ```HTML
+  <!-- Seperation of concerns -->
+  <!-- index.html -->
+  <body>
+    <h2>Hello world</h2>
+  </body>
+  ```
+  ```CSS
+  /* Seperation of concerns */
+  /* public/css/styles.css */
+  h2 {
+    color: red;
+  }
+  ```
+  ```JavaScript
+  // Seperation of concerns
+  // public/js/main.js
+  document.querySelector('h2').addEventListener('click', sayHi)
+  function sayHi() {
+    alert('hello');
+  }
+  ```
+  - **Source:** What is programming MVC? by DevMarketer: https://youtu.be/1IsL6g2ixak
+  - **Source2:** https://en.wikipedia.org/wiki/Separation_of_concerns
 - [ ] What's the difference between host objects and native objects?
   - **Explanation:**
   - **Use:**
