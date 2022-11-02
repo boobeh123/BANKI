@@ -1106,11 +1106,46 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Have you ever used JavaScript templating? If so, what libraries have you used?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Have you ever used JavaScript templating? If so, what libraries have you used?
+  - **Explanation:** I have used `EJS`, `Pug`, and `Handlebars` as templating engines for my full stack web applications.
+  - **Use:** These templating languages were used to display variable data and dynamically generate content on my web pages.
+  - **Example:** `see below`
+  ```HTML
+  <!-- EJS -->
+  <!-- Dymamically generate content -->
+  <% todos.forEach( el => { %>
+    <li class='todoItem' data-id='<%=el._id%>'>
+      <div class="collapsible-header container">
+        <!-- Display variable data -->
+        <span class='<%= el.completed === true ? 'completed' : 'not' %> '><%= el.todo %></span>
+      </div>
+    </li>
+  <% }) %>
+
+  <!-- Pug -->
+  <!-- Dynamically generate content -->
+  tbody
+    each user in userInfo
+      if user.id == currentUser
+    each link,index in urlInfo
+      if link.user == user.email
+        tr
+          td
+            <!-- Display variable data -->
+            a(href=`${link.slug}` target="_blank" id=`shortLink-${index}`) #{link.slug}
+
+  <!-- Handlebars -->
+  <!-- Dynmically generate content -->
+  <tbody>
+    {{#each stories}}
+      <tr>
+        <!-- Display variable data -->
+        <td><a href="/stories/{{_id}}">{{title}}</a></td>
+        <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+  ```
+  - **Source:** `Project that uses EJS`: https://github.com/boobeh123/My-To-do-list
+  - **Source2:** `Project that uses Pug`: https://github.com/CodeforHawaii/HACC2022
+  - **Source3:** `Project that uses Handlebars`: https://github.com/boobeh123/Story-books
 - [X] Explain "hoisting".
   - **Explanation:**  `var` Declarations are processed when the function starts & are defined from the beginning of the function, no matter where the definition is.
   - **Use:** Using `var` can allow code to execute before it is defined.
