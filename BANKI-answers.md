@@ -1313,11 +1313,75 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What language constructions do you use for iterating over object properties and array items?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What language constructions do you use for iterating over object properties and array items?
+  - **Explanation:** I usually start with `for loops` on my first pass-through over the problem. I will refactor how I iterate over arrays or objects when the solution is clear to me.
+  - **Use:** A `for loop` is how I iterate through arrays of primitives. A `for of loop` is how I iterate through an array of objects. If the problem wants the original array to be mutated I will use the `forEach()` method, otherwise `map()` usually is my go-to iterator method after trying a `for loop`. If I need to iterate through an object I will use a `for in loop`. I will use the initialized variable to access properties and use bracket notation to access property-values.
+  - **Example:** `see below`
+  ```JavaScript
+  // Variables
+  let arrayOfNumbers = [2, 3, 4]
+  let changeThisArray = [2,4,6,7,5,3,8,1,9]
+  let arrayOfUsers = [
+    {id: 'john', name: "John Smith", age: 20},
+    {id: 'ann', name: "Ann Smith", age: 24},
+    {id: 'pete', name: "Pete Peterson", age: 31},
+  ];
+  let users = [ 
+    { name: "John", surname: "Smith", id: 1 },
+    { name: "Pete", surname: "Hunt", id: 2 },
+    { name: "Mary", surname: "Key", id: 3 }
+  ];
+  let object = { a: 1, b: 2, c: 3 };
+  
+  // For loop
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    console.log(array[i])
+  }
+
+  // forEach (mutates original array)
+  console.log(changeThisArray)  // Output -> [2, 4, 6, 7, 5, 3, 8, 1, 9]
+  function filterRange(array, a, b) {
+    array.forEach((element, index) => element >= a && element <= b ? element : array.splice(index, 1))
+  }
+  filterRange(changeThisArray, 3, 9)
+  console.log(changeThisArray)  // Output -> [4, 6, 7, 5, 3, 8, 9]
+
+  // for of loop
+  function groupById(array) {
+    let emptyObj = {};
+
+    for (const element of array) {
+        emptyObj[element.id] = {
+            id: element.id,
+            name: element.name,
+            age: element.age
+        }        
+    }
+    return emptyObj
+  }
+  const exampleOne = groupById(arrayOfUsers);
+  console.log(exampleOne); // Output - > { "john": { "id": "john", "name": "John Smith", "age": 20 }, "ann": { "id": "ann", "name": "Ann Smith", "age": 24 }, "pete": { "id": "pete", "name": "Pete Peterson", "age": 31 } }
+
+  // Map 
+  function mapObjectToObject(array) {
+    return array.map((element) => ({
+        fullName: `${element.name} ${element.surname}`,
+        id: element.id
+    }))
+  }
+  const exampleOne = mapObjectToObject(users)
+  console.log(exampleOne);  // Output -> [ { "fullName": "John Smith", "id": 1 }, { "fullName": "Pete Hunt", "id": 2 }, { "fullName": "Mary Key", "id": 3 } ] 
+
+  // for in
+  for (const property in object) {
+    console.log(`${property}: ${object[property]}`);
+  }
+  ```
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
 - [ ] Explain the difference between mutable and immutable objects.
   - **Explanation:**
   - **Use:**
