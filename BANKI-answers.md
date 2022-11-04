@@ -1298,11 +1298,34 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What are the pros and cons of using Promises instead of callbacks?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What are the pros and cons of using Promises instead of callbacks?
+  - **Explanation:** Promises allows asynchronous code to be readable like synchronous code and avoids callback hell. Using the `Promise.allSettled` method may require polyfills to support older browsers.
+  - **Use:** Promises can be used with the `fetch()` API and resolves when a response is received.
+  - **Example:** `see below`
+  ```JavaScript
+  // Fetches data from Dog CEO API
+  fetch('https://dog.ceo/api/breeds/list/all')
+    // Promise resolves when a response is received
+    .then(response => {
+        return response.json();
+    })
+    // The response data is rendered into the DOM
+    .then(data =>{
+        const dataObject= data.message;
+        const dataObjectProperties = Object.keys(dataObject);
+
+        for (let i = 0; i < dataObjectProperties.length; i++) {
+            const optionTags = document.createElement('option');
+            optionTags.innerText = dataObjectProperties[i];
+            optionTags.value = dataObjectProperties[i];
+            document.querySelector('select').appendChild(optionTags);
+        }
+    })
+  ```
+  - **Source:** https://javascript.info/promise-api
+  - **Source:** https://javascript.info/promise-basics
+  - **Source:** https://javascript.info/callbacks
+  - **Source:** https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/
 - [ ] What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
   - **Explanation:**
   - **Use:**
