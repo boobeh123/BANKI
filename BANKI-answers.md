@@ -1331,11 +1331,24 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What tools and techniques do you use debugging JavaScript code?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What tools and techniques do you use debugging JavaScript code?
+  - **Explanation & Use:** The `console.log()` method allows me to manage code while writing client or server-side JavaScript. When I run into errors, reading the error will point out where & how the error occurred. Researching the error(s) will usually provide additional insight.  A helpful technique while writing front-end code is to inspect the page, select an element, target the element and edit the styles on dev tools.
+  - **Example:** `see below`
+  ```JavaScript
+  "use strict"
+  let mistypeVariable;
+  mistypeVarible = 0; // ReferenceError: mistypeVarible is not defined
+  console.log(mistypeVariable); // Does not print due to error above
+  console.log(mistypeVarible);  // Does not print due to error above
+  ```
+  ```JavaScript
+  let mistypeVariable;
+  mistypeVarible = 0; // 0
+  console.log(mistypeVariable); // Undefined
+  console.log(mistypeVarible);  // 0
+  ```
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/API/console/log
+  - **Source2:** https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools
 - [X] What language constructions do you use for iterating over object properties and array items?
   - **Explanation:** I usually start with `for loops` on my first pass-through over the problem. I will refactor how I iterate over arrays or objects when the solution is clear to me.
   - **Use:** A `for loop` is how I iterate through arrays of primitives. A `for of loop` is how I iterate through an array of objects. If the problem wants the original array to be mutated I will use the `forEach()` method, otherwise `map()` usually is my go-to iterator method after trying a `for loop`. If I need to iterate through an object I will use a `for in loop`. I will use the initialized variable to access properties and use bracket notation to access property-values.
