@@ -1550,11 +1550,34 @@ h1, h2, h3, h4, h5, h6 {
   console.log(addTwo(5));
   ```
   - **Source:** https://www.codecademy.com/courses/introduction-to-javascript/lessons/higher-order-functions/exercises/review
-- [ ] Can you give an example for destructuring an object or an array?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Can you give an example for destructuring an object or an array?
+  - **Explanation:** Destructuring in JavaScript is a method of extracting multiple properties from an array through assignments.
+  - **Use:** Destructuring has made extracting data from an array very simple and readable. Returned arrays can be destructured and destructuring can be used to swap values.
+  - **Example:** `see below`
+  ```JavaScript
+  // Destructuring an array
+  let [first, second, third] = ['Hello', 'world', 'olleh']
+  console.log(first)  // Output -> Hello
+  console.log(second) // Output -> world
+  console.log(third)  // Output -> olleh
+
+  // Destructuring returned array value
+  function greetings() {
+    return ["Hello", "Hey", "hi"];
+  }
+  let [a, b, c] = greetings();
+  console.log(a); // Output -> Hello
+  console.log(b); // Output -> Hey
+  console.log(c); // Output -> hi
+
+  // Swapping values with destructuring
+  let a, b;
+  [a, b] = ["Hello", "World"];
+  [a, b] = [b, a];
+  console.log(a); // Output -> World
+  console.log(b); // Output -> Hello
+  ```
+  - **Source:** https://www.freecodecamp.org/news/array-destructuring-in-es6-30e398f21d10/
 - [X] ES6 Template Literals offer a lot of flexibility in generating strings, can you give an example?
   - **Explanation:** Template literals offer a readable way to perform string interpolation by concatenating expression with placeholders.
   - **Use:** A template string is created by delimiting the string with backtick characters ` (``) `. A template string may contain placeholders, which are embedded expressions delimited by a dollar sign & curly braces ` ${expression} `.
