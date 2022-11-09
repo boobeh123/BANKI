@@ -1603,11 +1603,28 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What are the benefits of using spread syntax and how is it different from rest syntax?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What are the benefits of using spread syntax and how is it different from rest syntax?
+  - **Explanation:** Spread syntax "expands" an array into its elements, while rest syntax collects multiple elements and "condenses" them into a single element.
+  - **Use:** Spread & Rest syntax can be used in destructuring arrays.
+  - **Example:** `see below`
+  ```JavaScript
+  // Rest syntax
+  let a, b, rest;
+  [a, b, ...rest] = [1, 2, 3, 4, 5]
+  console.log(a);   // Output -> 1
+  console.log(b);   // Output -> 2
+  console.log(rest);// Output -> [3, 4, 5]
+
+  // Spread syntax
+  let planets = ["Mercury", "Earth", "Venus", "Mars", "Pluto", "Saturn"];
+  let [first, second, ...rest] = ["Mercury", "Earth", ...planets, "Saturn"];
+  console.log(first);   //Output: Mercury
+  console.log(second);  //Output: Earth
+  console.log(rest);    //Output: ['Mercury', 'Earth', 'Venus', 'Mars', 'Pluto', 'Saturn', 'Saturn']
+  ```
+  - **Source:** https://www.freecodecamp.org/news/array-destructuring-in-es6-30e398f21d10/
+  - **Source2:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+  - **Source3:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 - [X] How can you share code between files?
   - **Explanation:** Code that runs in the browser uses `ES6` modules. Modules are defined with an `export` and taken into use with an `import` at the beginning of the file. NodeJS, `require()` is a built-in function to include external modules that exist in separate files.
   - **Use:** I have used `export` & `require` syntax to hide login credentials to my database. 
