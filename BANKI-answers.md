@@ -572,11 +572,33 @@ h1, h2, h3, h4, h5, h6 {
   }
   ```
   - **Source:** https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#media-queries
-- [ ] Are you familiar with styling SVG?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Are you familiar with styling SVG?
+  - **Explanation:** Yes I can use external stylesheets to style an `<svg>` element and use inline CSS to do basic-styling to an attribute.
+  - **Use:** SVG-format vector images can be rendered at any size without loss of quality.
+  - **Example:** `see below`
+  ```HTML
+  <!-- The `d` attribute is styled with inline css -->
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <path 
+      d="m9.067.43 1.99 4.031c.112.228.33.386.58.422l4.45.647a.772.772 0 0 1 .427 1.316l-3.22 3.138a.773.773 
+      0 0 0-.222.683l.76 4.431a.772.772 0 0 1-1.12.813l-3.98-2.092a.773.773 0 0 0-.718 0l-3.98 2.092a.772.772 
+      0 0 1-1.119-.813l.76-4.431a.77.77 0 0 0-.222-.683L.233 6.846A.772.772 0 0 1 .661 5.53l4.449-.647a.772.772
+      0 0 0 .58-.422L7.68.43a.774.774 0 0 1 1.387 0Z" 
+      stroke="white"
+      fill="#FC7614"/>
+  </svg>
+  ```
+  ```CSS
+  /* Styles the SVG element */
+  svg {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  display: block;
+  margin: 0 auto;
+  }
+  ```
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation
 - [X] Can you give an example of an `@media` property other than screen?
   - **Explanation:**The default media type is `screen` and a few other common media types are `all` and `print`.
   - **Use:** `see below`
