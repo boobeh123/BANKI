@@ -1709,11 +1709,12 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:** Node allows developers to run JavaScript on Servers, Desktops, and elsewhere.
   - **Source:** https://nodejs.org/en
   - **Source2:** https://nodejs.org/en/about/
-- [ ] Why use Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X Why use Node.js?
+  - **Explanation:** `Node` is widely used across several operating systems, offers stable & experimental runtime versions, and stood the test of time. `Bun` is newer runtime that may offer unique features, but is not widely used when compared to Node.
+  - **Use:** Node allows developers to run JavaScript on Servers, Desktops, and elsewhere. Node is used across multiple fortune 500 companies.
+  - **Example:** A few companies that use Node are Linkedin, Netflix, Uber.
+  - **Source:** https://nodejs.org/en
+  - **Source:** https://www.trio.dev/blog/companies-use-node-js
 - [ ] What are the features of Node.js?
   - **Explanation:**
   - **Use:**
