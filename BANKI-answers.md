@@ -1720,11 +1720,17 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] How do you update NPM to a new version in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] How do you update NPM to a new version in Node.js?
+  - **Explanation:** To update NPM on Windows operating systems, you will need to modify the installation PATH or remove the npm files from the nodejs folder and update NPM using the command `npm install npm@latest`. On Mac or Linux operating systems, you may use the command `npm install -g npm@latest`.
+  - **Use:** On Windows, you may need to edit thit the installation PATH, remove a couple files, and copy a `npmrc` file to another location before running the command to update.
+  - **Example:** `see below`
+  ```
+  // NodeJS folder PATH
+  C:\Program Files (x86)\nodejs
+
+  // NPM folder
+  C:\Users\<username>\AppData\Roaming\npm
+  - **Source:** https://docs.npmjs.com/try-the-latest-stable-version-of-npm
 - [ ] Why is Node.js Single-threaded?
   - **Explanation:**
   - **Use:**
