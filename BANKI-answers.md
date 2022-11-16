@@ -1796,11 +1796,38 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What is the purpose of `module.exports` in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is the purpose of `module.exports` in Node.js?
+  - **Explanation:** The module.exports object encapsulates all related code into a single unit of code and exported code can be imported into another file.
+  - **Use:** Code can be exported with the `module.exports` function and be used in another file by using the `require()` keyword.
+  - **Example:** `see below`
+  ```JavaScript
+  // /config/database.js 
+  const mongoose = require('mongoose')
+  const connectDB = async () => {
+    try {
+      const conn = await mongoose.connect(process.env.DB_STRING, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+        useCreateIndex: true
+      })
+      console.log(`MongoDB Connected: ${conn.connection.host}`)
+    } catch (err) {
+      console.error(err)
+      process.exit(1)
+    }
+  }
+  // connectDB function will be exported
+  module.exports = connectDB
+  
+  // server.js
+  // connectDB function is imported using the require() keyword
+  const connectDB = require('./config/database')
+  // Function is invoked within another file.
+  connectDB()
+  ```
+  - **Source:** https://nodejs.org/api/modules.html#moduleexports
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [ ] What is the difference between Asynchronous and Non-blocking?
   - **Explanation:**
   - **Use:**
