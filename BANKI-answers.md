@@ -1736,16 +1736,32 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Explain callback in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Explain callback in Node.js.
+  - **Explanation:** A callback function is called after a given task. When you nest a function inside another function as an argument.    
+  - **Use:** It allows other code to be run in the meantime and prevents any blocking. Callbacks can break down complex tasks into smaller steps.
+  - **Example:** `see below`
+  ```JavaScript
+  // The production() function is nested within the order() function. 
+  let order = (call_production) => {
+    console.log("Order placed. Please call production")
+    production(); // Invokes the production() function
+  };
+  
+  let production = () => {
+    console.log("Production has started")
+  };
+
+  order();        // Invoking the order() function 
+  // Output -> Order placed. Please call production
+  // output -> Production has started
+  ```
+  - **Source:** https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [ ] What is callback hell in Node.js?
-  - **Explanation:**
+  - **Explanation:** 
   - **Use:**
   - **Example:**
-  - **Source:**
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [X] How do you prevent/fix callback hell?
   - **Explanation:** Callback hell are multiple nested callback functions that are dependent on each other.
   - **Use:** This can be solved by using async/await keywords in an async function, chaining promises, using promise.all() or promise.any().
