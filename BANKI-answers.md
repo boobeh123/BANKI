@@ -1757,15 +1757,93 @@ h1, h2, h3, h4, h5, h6 {
   ```
   - **Source:** https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/
   - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
-- [ ] What is callback hell in Node.js?
-  - **Explanation:** 
-  - **Use:**
-  - **Example:**
+- [X] What is callback hell in Node.js?
+  - **Explanation:** Callback hell are multiple nested callback functions that are dependent on each other which results in unreadable and unmanageable code.
+  - **Use:** Callbacks can break down complex tasks into smaller steps.
+  - **Example:** `see below`
+  ```JavaScript
+  let order = (call_production) => {
+    console.log("Order placed. Please call production")
+    production();
+  };
+  
+  let production = () => {
+    setTimeout(()=>{
+      console.log("production has started")
+      setTimeout(()=>{
+        console.log("The fruit has been chopped")
+        setTimeout(()=>{
+          console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} Added`)
+          setTimeout(()=>{
+            console.log("start the machine")
+            setTimeout(()=>{
+              console.log(`Ice cream placed on ${stocks.holder[1]}`)
+              setTimeout(()=>{
+                console.log(`${stocks.toppings[0]} as toppings`)
+                setTimeout(()=>{
+                  console.log("serve Ice cream")
+                },2000)
+              },3000)
+            },2000)
+          },1000)
+        },1000)
+      },2000)
+    },0000)
+  };
+  order();
+  ```
   - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
+  - **Source:** https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/
 - [X] How do you prevent/fix callback hell?
-  - **Explanation:** Callback hell are multiple nested callback functions that are dependent on each other.
-  - **Use:** This can be solved by using async/await keywords in an async function, chaining promises, using promise.all() or promise.any().
-  - **Example:** In an async function we can `await fetch` & `await response.json()` or we can use a conditional inside a `.then()` handler and check for that response.
+  - **Explanation:** This can be solved by using async/await keywords in an async function, chaining promises, using promise.all() or promise.any().
+  - **Use:**  In an async function we can `await fetch` & `await response.json()` or we can use a conditional inside a `.then()` handler and check for that response.
+  - **Example:** `see below`
+  ```JavaScript
+  function time(ms) {
+
+   return new Promise( (resolve, reject) => {
+
+      if(true){
+         setTimeout(resolve,ms);
+      }
+
+      else{
+         reject(console.log("Shop is closed"))
+      }
+    });
+  }
+  async function kitchen(){
+      try{
+    await time(2000)
+    console.log(`Fruit was selected`)
+
+    await time(0000)
+    console.log("production has started")
+
+    await time(2000)
+    console.log("fruit has been chopped")
+
+    await time(1000)
+    console.log(`Milk and Creme added`)
+
+    await time(1000)
+    console.log("start the machine")
+
+    await time(2000)
+    console.log(`ice cream placed on Cone`)
+
+    await time(3000)
+    console.log(`Sprinkles as toppings`)
+
+    await time(2000)
+    console.log("Serve Ice Cream")
+      }
+
+      catch(error){
+    console.log("customer left")
+      }
+  }
+  ```
   - **Source:** https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/
 - [ ] Explain the role of REPL in Node.js.
   - **Explanation:**
