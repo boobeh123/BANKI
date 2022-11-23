@@ -1731,11 +1731,10 @@ h1, h2, h3, h4, h5, h6 {
   // NPM folder
   C:\Users\<username>\AppData\Roaming\npm
   - **Source:** https://docs.npmjs.com/try-the-latest-stable-version-of-npm
-- [ ] Why is Node.js Single-threaded?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Why is Node.js Single-threaded?
+  - **Explanation:** Node is single-threaded for async processing and single-threaded async processing allows for performance and scalability.
+  - **Use:** The Node JS Processing paradigm is heavily influenced by the JavaScript Event-based model and the JavaScript callback system. 
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [X] Explain callback in Node.js.
   - **Explanation:** A callback function is called after a given task. When you nest a function inside another function as an argument.    
   - **Use:** It allows other code to be run in the meantime and prevents any blocking. Callbacks can break down complex tasks into smaller steps.
