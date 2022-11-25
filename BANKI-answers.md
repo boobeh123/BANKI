@@ -1844,11 +1844,18 @@ h1, h2, h3, h4, h5, h6 {
   }
   ```
   - **Source:** https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/
-- [ ] Explain the role of REPL in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Explain the role of REPL in Node.js.
+  - **Explanation:** REPL stands for `Read Eval Print Loop`. It represents a computer environment and is similar to a windows console or Unix/Linux shell.
+  - **Use:** Commands are entered into the REPL and the system responds with an output.
+  - **Example:** `see below`
+  ```JavaScript
+  node -v   // Command Input
+  8.15.0    // Command Output
+
+  npm -v    // Command Input
+  v16.17.0  // Command Output
+  ```
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [ ] Name the types of API functions in Node.js.
   - **Explanation:**
   - **Use:**
