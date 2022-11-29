@@ -1856,11 +1856,11 @@ h1, h2, h3, h4, h5, h6 {
   v16.17.0  // Command Output
   ```
   - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
-- [ ] Name the types of API functions in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Name the types of API functions in Node.js.
+  - **Explanation:** There are Asynchronous non-blocking functions and Synchronous blocking functions.
+  - **Use:** All Node.js library APIs are asynchronous and a Node.js-based server never waits for an API to return data. 
+  - **Example:** The Node.js serevr moves to the next API after calling, and a notification mechanism from a Node.js event responds to the server for the previous API call.
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [ ] What are the functionalities of NPM in Node.js?
   - **Explanation:**
   - **Use:**
