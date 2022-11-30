@@ -1861,11 +1861,19 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:** All Node.js library APIs are asynchronous and a Node.js-based server never waits for an API to return data. 
   - **Example:** The Node.js serevr moves to the next API after calling, and a notification mechanism from a Node.js event responds to the server for the previous API call.
   - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
-- [ ] What are the functionalities of NPM in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What are the functionalities of NPM in Node.js?
+  - **Explanation:** The Node Package Manager provides an online repository for Node.js packages & modules. NPM also provides command-line utility that manages Node.js versions, dependencies and installs packages.
+  - **Use:** You can browse through packages & modules from the online repositry at `https://www.npmjs.com/` and type commands into the terminal to install the package.
+  - **Example:** `see below`
+  ```JavaScript
+  // Installing a package
+  npm install figlet
+
+  // Viewing versions
+  node -v
+  npm -v
+  ```
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [ ] What is the difference between Node.js and Ajax?
   - **Explanation:**
   - **Use:**
