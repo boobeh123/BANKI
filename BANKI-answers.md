@@ -1879,11 +1879,14 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What are “streams” in Node.js? Explain the different types of streams present in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What are “streams” in Node.js? Explain the different types of streams present in Node.js.
+  - **Explanation:** Streams are objects that enable you to read data or write data continuously.
+  - **Use:** There are four types of streams:
+  Readable – Used for reading operations
+  Writable − Used for write operations
+  Duplex − Can be used for both reading and write operations
+  Transform − A type of duplex stream where the output is computed based on input
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [ ] Explain chaining in Node.js.
   - **Explanation:**
   - **Use:**
