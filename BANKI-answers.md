@@ -1902,11 +1902,11 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What is Event loop in Node.js work? And How does it work?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is Event loop in Node.js work? And How does it work?
+  - **Explanation:** Node.js retrieves the incoming requests and adds those to the Event Queue. The requests are then passed one-by-one through the Event Loop. The Event Loop processes simple requests and returns the responses to the corresponding clients.
+  - **Use:** The event loop runs tasks in the call stack first and when the stack is empty the event loop picks up tasks from the task queue and moves those tasks to the call stack to be run.
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
+  - **Source:** [Philip Roberts: The Event Loop JSConf](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 - [X] What is the purpose of `module.exports` in Node.js?
   - **Explanation:** The module.exports object encapsulates all related code into a single unit of code and exported code can be imported into another file.
   - **Use:** Code can be exported with the `module.exports` function and be used in another file by using the `require()` keyword.
