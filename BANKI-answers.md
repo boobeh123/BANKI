@@ -1939,11 +1939,11 @@ h1, h2, h3, h4, h5, h6 {
   ```
   - **Source:** https://nodejs.org/api/modules.html#moduleexports
   - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
-- [ ] What is the difference between Asynchronous and Non-blocking?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is the difference between Asynchronous and Non-blocking?
+  - **Explanation:** In an asynchronous system, tasks are completed independently and tasks do not block other tasks from starting or finishing. In a synchronous system, tasks are completed one after another and the current task must be completed before the next task begins.
+  - **Example:** In an synchronous system, all tasks are in the same "lane" and cannot overtake the other. In an asynchronous system, all tasks are in their own "lane" and will finish at their own pace.
+  - **Source:** https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [ ] What is Tracing in Node.js?
   - **Explanation:**
   - **Use:**
