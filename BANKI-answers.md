@@ -1954,11 +1954,21 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Difference between `setImmediate()` and `setTimeout()`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Difference between `setImmediate()` and `setTimeout()`?
+  - **Explanation:** `setTimeout` executes code based off a timer and if no timer is provided, a value of 0 is used which executes the code on the next event cycle. `setImmediate` executes a callback immediately after the browser has completed other operations such as events and display updates.
+  - **Use:** `setImmediate` can be used to break up long running operations and can be used over `setTimeout(fn, 0)` to execute heavy operations.
+  - **Example:** `see below`
+  ```JavaScript
+  // Node terminal
+  function timeOutVsImmediate() {
+    setTimeout(() => console.log('timeout'), 0);
+    setImmediate(() => console.log('Immediate'));
+  }
+  timeOutVsImmediate(); // Output -> Immediate timeout
+  ```
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [ ] What is `process.nextTick()`?
   - **Explanation:**
   - **Use:**
