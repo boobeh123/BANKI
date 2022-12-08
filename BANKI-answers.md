@@ -1969,10 +1969,18 @@ h1, h2, h3, h4, h5, h6 {
   - **Source:** https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
   - **Source:** https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate
   - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
-- [ ] What is `process.nextTick()`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
+- [X] What is `process.nextTick()`?
+  - **Explanation:** A tick occurs every time the event loop takes a full trip. `nextTick()` postpones the execution of action until the next pass around the event loop before the next event loop tick starts.
+  - **Use:** `nextTick()` is faster than `setTimeout()` with a timer of 0. `nextTick()` executes an action just before the beginning of the next tick and `setTimeout()` executes an action at the end of the next tick.
+  - **Example:** `see below`
+  ```JavaScript
+  // Node terminal
+  function tickVsTimeout() {
+    setTimeout(() => console.log('timeout'), 0);
+    process.nextTick(() => console.log('tick'));
+  }
+  tickVsTimeout(); // Output -> tick timeout
+  ```
   - **Source:**
 - [X] What is package.json? What is it used for?
   - **Explanation:** It is a configuration file that npm uses to save all project information. This file can be shared with other developers to install required package needed for the project. 
