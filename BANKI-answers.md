@@ -1981,7 +1981,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   tickVsTimeout(); // Output -> tick timeout
   ```
-  - **Source:**
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [X] What is package.json? What is it used for?
   - **Explanation:** It is a configuration file that npm uses to save all project information. This file can be shared with other developers to install required package needed for the project. 
   - **Use:** & **Example:** Typing the command `npm init` will generate the package.json file after answering the prompted questions. Scripts can be added to this file to start a server.
@@ -1996,11 +1996,19 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What is `EventEmitter` in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is `EventEmitter` in Node.js?
+  - **Explanation:** A class that holds all the objects that can emit events.
+  - **Use:** Whenever an object from the EventEmitter class throws an event, all attached functions are called upon synchronously.
+  - **Example:** `see below`
+  ```JavaScript
+  // Node terminal
+  const EventEmitter = require('events');
+  class MyEmitter extends eventEmitter {}
+  const myEmitter = new MyEmitter();
+  myEmitter.on('event', () => console.log('Event happened'))
+  myEmitter.emit('event') // Output -> Event happened -> true
+  ```
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 
 ### CS Theory 
 
