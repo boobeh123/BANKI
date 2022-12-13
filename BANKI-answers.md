@@ -62,10 +62,10 @@ Don't sell yourself out and say "bootcamp" or "school".
   - **Cause:**
   - **Action:**
   - **Result:**
-- [ ] Describe a situation in which you worked diligently on a project and it did not produce the desired results. Why didn't you get the desired results? What did you learn from the experience?
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+- [X] Describe a situation in which you worked diligently on a project and it did not produce the desired results. Why didn't you get the desired results? What did you learn from the experience?
+  - **Cause:** At my last opportunity I was tasked to develop the front-end code for an in-house URL shortener as part of the Hawaii Annual Code Challenge hackathon.
+  - **Action:** I had to use an unfamiliar templating language and CSS framework to develop the front-end code for this codebase.
+  - **Result:** Our team placed in 5th place and I was able to push production-level code with a new framework and templating language.
 - [X] Give an example of an important project goal you reached and how you achieved it.
   - **Cause:** At my last company my coworkers had to go through physical contracts to verify information.
   - **Action:** I created digital records of these contracts and entered data from it into a spreadsheet.
