@@ -151,11 +151,9 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:** I can declare an element and add the lang attribute with its value being the language.
   - **Example:** I can set a specific paragraph's language to French by using the `<p lang="fr">` or set the entire page's language to British English with `<html lang="en-GB">`.
   - **Source:** https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang
-- [ ] What kinds of things must you be wary of when designing or developing for multilingual sites?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What kinds of things must you be wary of when designing or developing for multilingual sites?
+  - **Explanation:** Use lang attribute in your HTML and include the locale in the path. Allow a user to change country/language without hassle. Avoid placing text within an image (translating image text requires separate images). Avoid designs where overflowing text would break the design (tranlsated words may become longer). The design should use color appropriately. Be aware of how countries format dates and currencies. Avoid concatenating translated strings. Be aware of reading direction in other languages (left-to-right / right-to-left)
+  - **Source:** https://www.frontendinterviewhandbook.com/html-questions
 - [X] What are `data-` attributes good for?
   - **Explanation:** Allows extra information to be stored and exchanged between the HTML and its DOM representation. 
   - **Use:** I have used the `data-*` attribute as part of a `PUT` (& `DELETE`) request in a to-do-list program. 
