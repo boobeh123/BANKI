@@ -248,11 +248,17 @@ Most of the technical questions should have a three sentence response in the EUE
   ```
   - **Source:** https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*
   - **Source2:** https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
-- [ ] Consider HTML5 as an open web platform. What are the building blocks of HTML5?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Consider HTML5 as an open web platform. What are the building blocks of HTML5?
+  - **Explanation:** 
+  Semantics - Describes content. 
+  Connectivity - Communicates with the server.
+  Offline and storage - Storing client-side data and operating offline.
+  Multimedia - Video & audio.
+  2D/3D graphics and effects - A variety of of presentation options.
+  Performance and integration - Optimizing speed through usage of computer hardware.
+  Device access - Allows usage of various input and output devices.
+  Styling - Use of sophisticated themes.
+  - **Source:** https://www.frontendinterviewhandbook.com/html-questions
 - [X] Describe the difference between a cookie, sessionStorage and localStorage.
   - **Explanation:** Local & session storage are web storage objects saved in the browser and are not sent to a server. Cookies are small pieces of data that are stored in the browser and sent back to a server.
   - **Use:** The web objects saved from local storage doesn't expire & the data from sessionStorage is cleared when the page session ends. Cookies are used in session management, tracking, and personalization. 
