@@ -266,11 +266,18 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Source1:** https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
   - **Source2:** https://javascript.info/localstorage
   - **Source3:** https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
-- [ ] Describe the difference between `<script>, <script async> and <script defer>`.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Describe the difference between `<script>, <script async> and <script defer>`.
+  - **Explanation:** 
+  The `script` tag blocks HTML parsing and resumes after the script is executed. 
+  The `script async` tag is fetched in parallel to HTML parsing and executed as soon as it is available.
+  The `script defer` tag will be fetched in parallel to HTML parsing and executed when the page has finished parsing. 
+  - **Use:** 
+  The `script async` tag is used when the script is independent of any other scripts on the page.
+  The `script defer` tag is used to ensure that the HTML is fully parsed before executing.  
+  - **Example:** 
+  The `script async` tag can be used for analytic scripts. 
+  The `script defer` tag can be used if a script relies on a fully-parsed DOM.
+  - **Source:** https://www.frontendinterviewhandbook.com/html-questions#describe-the-difference-between-script-script-async-and-script-defer
 - [X] Why is it generally a good idea to position CSS `<link>`s within `<head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
   - **Explanation:** These unique placements help with the load time of a web page. 
   - **Use:** CSS can be loaded while the the website is being loaded and javascript can only render one file at a time, which may prohibit other files from loading. 
