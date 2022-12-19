@@ -283,11 +283,14 @@ Most of the technical questions should have a three sentence response in the EUE
   - **Use:** CSS can be loaded while the the website is being loaded and javascript can only render one file at a time, which may prohibit other files from loading. 
   - **Example:** Placing the `<link rel="stylesheet" href="style.css">` after the `<title>` element & the `<script src="main.js"></script>` just before the `</body>` closing tag.
   - **Source:** https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests
-- [ ] What is progressive rendering?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] What is progressive rendering?
+  - **Explanation:** A technique used to improve the perceived load time of a webpage which renders content as quickly as possible.
+  - **Use:** This technique can be used to improve performance for mobile data connections.
+  - **Example:** `See below`
+  `Lazy loading of images`: Images on the page are not loaded all at once. JavaScript will be used to load an image when the user scrolls into the part of the page that displays the image.
+  `Prioritizing visible content (or above-the-fold rendering)`: Include only the minimum CSS/content/scripts necessary & using deferred scripts or listen for the DOMContentLoaded/load event to load in other resources and content.
+  `Async HTML fragments`: Flushing parts of the HTML to the browser as the page is constructed on the back end. 
+  - **Source:** https://www.frontendinterviewhandbook.com/html-questions#what-is-progressive-rendering
 - [ ] Why you would use a `srcset` attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.
   - **Explanation:**
   - **Use:**
