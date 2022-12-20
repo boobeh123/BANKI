@@ -291,11 +291,14 @@ Most of the technical questions should have a three sentence response in the EUE
   `Prioritizing visible content (or above-the-fold rendering)`: Include only the minimum CSS/content/scripts necessary & using deferred scripts or listen for the DOMContentLoaded/load event to load in other resources and content.
   `Async HTML fragments`: Flushing parts of the HTML to the browser as the page is constructed on the back end. 
   - **Source:** https://www.frontendinterviewhandbook.com/html-questions#what-is-progressive-rendering
-- [ ] Why you would use a `srcset` attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Why you would use a `srcset` attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.
+  - **Explanation:** I would use the srcset attribute to serve different images based off their device display width. The browser would calculate the client's resolution by dividing the image width by the device width. The browser would then choose the image with a ratio closer to quotient.
+  - **Use:** Srcset serves low resolution images to devices with narrower display width to improve performance and decrease data usage. It also serves high resolution images to enhance user experience for devices with retina displays.
+  - **Example:** `see below`
+  ```HTML
+  <img srcset="small.jpg 500w, medium.jpg 1000w, large.jpg 2000w" src="#" alt="#"> 
+  ```
+  - **Source:** https://www.frontendinterviewhandbook.com/html-questions#why-you-would-use-a-srcset-attribute-in-an-image-tag-explain-the-process-the-browser-uses-when-evaluating-the-content-of-this-attribute
 - [X] Have you used different HTML templating languages before?
   - **Explanation:** Yes, I have used `EJS` in a few of my projects to display variable data from MongoDB.
   - **Use:** I have used the scriplet tag (`<%`) & the plain ending tag (`%>`) to iterate through my collection. I then used both (`<%=`) & (`%>`) tags to output document values.
