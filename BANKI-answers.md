@@ -632,11 +632,13 @@ h1, h2, h3, h4, h5, h6 {
   ```
   - **Source:** https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#media-queries
   - **Source2:** https://developer.mozilla.org/en-US/docs/Web/CSS/@media
-- [ ] What are some of the "gotchas" for writing efficient CSS?
+- [X] What are some of the "gotchas" for writing efficient CSS?
   - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+  Browsers match selectors from rightmost (key selector) to left. 
+  The shorter the length of the selector chain, the faster the browser can determine if that element matches the selector. 
+  Hence avoid key selectors that are tag and universal selectors. 
+  Avoid writing styles that change the layout (trigger reflow) where possible.
+  - **Source:** https://www.frontendinterviewhandbook.com/css-questions#what-are-some-of-the-gotchas-for-writing-efficient-css
 - [X] What are the advantages/disadvantages of using CSS preprocessors?
   - **Explanation:** Preprocessors help remove inefficiencies and contain ways to build websites easily and logically. Preprocessors have a learning curve with their syntax.
   - **Use:** Haml promotes Do not-Repeat-Yourself (DRY) concepts, well structured markup and make writing code easier. Sass requires less characters and provide a cleaner syntax. SCSS has a more flexible syntax, including the ability to write plain CSS.
