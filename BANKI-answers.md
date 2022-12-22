@@ -971,11 +971,50 @@ h1, h2, h3, h4, h5, h6 {
   ```
   - **Source:** https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design
   - **Source:** https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#mobile-first
-- [ ] How is responsive design different from adaptive design?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] How is responsive design different from adaptive design?
+  - **Explanation:** 
+  A responsive design is a single fluid website that can look good on any device. 
+  An anology for this is using a single ball that grows or shrinks to fit through several different hoops.
+
+  An adaptive design detects the device viewport size and provides the appropriate layout based. 
+  An anology for this is using several balls that fit depending on the hoop size.
+  - **Use:** Responsive designs uses a single layout using media queries, flexible grids, and responsive images. Adaptive designs uses user agent sniffing or DPI detection
+  - **Example:** `see below`
+  ```HTML
+      <div>
+        <div class="module">
+            <h1>This is a reponsive container</h1>
+        </div>
+
+        <div class="module ac">
+            <h1>This is an adaptive container</h1>
+        </div>
+    </div>
+  ```
+  ```CSS
+  * {
+    box-sizing: border-box;
+  }  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+  .module {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    border: 2px solid #999;
+  }  
+  @media screen and (max-width: 500px) {
+    .ac {
+      width: 300px;
+    }
+  }
+  ```
+  - **Source:** https://www.frontendinterviewhandbook.com/css-questions#how-is-responsive-design-different-from-adaptive-design
+  - **Source2:** https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/
 - [ ] Have you ever worked with retina graphics? If so, when and what techniques did you use?
   - **Explanation:**
   - **Use:**
