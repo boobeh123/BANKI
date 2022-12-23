@@ -1020,11 +1020,10 @@ h1, h2, h3, h4, h5, h6 {
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] Is there any reason you'd want to use `translate()` instead of `absolute` positioning, or vice-versa? And why?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Is there any reason you'd want to use `translate()` instead of `absolute` positioning, or vice-versa? And why?
+  - **Explanation:** `translate()` has shorter paint times which allows for smoother animations, but occupies its original space. If you do not want the original space to be occupied, `absolute` positioning will trigger reflow.
+  - **Use:** The `transform` property with a value of `translate()` uses a GPU layer for the element. The `position` property with a value of `absolute` triggers reflow and uses a CPU layer
+  - **Source:** https://www.frontendinterviewhandbook.com/css-questions#is-there-any-reason-youd-want-to-use-translate-instead-of-absolute-positioning-or-vice-versa-and-why
 
 ### Javascript
 
