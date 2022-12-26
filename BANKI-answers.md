@@ -1015,11 +1015,26 @@ h1, h2, h3, h4, h5, h6 {
   ```
   - **Source:** https://www.frontendinterviewhandbook.com/css-questions#how-is-responsive-design-different-from-adaptive-design
   - **Source2:** https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/
-- [ ] Have you ever worked with retina graphics? If so, when and what techniques did you use?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Have you ever worked with retina graphics? If so, when and what techniques did you use?
+  - **Explanation:** Retina is a marketing term that refers to high resolution screens with a pixel ratio bigger than 1. Using the highest resolution images and using responsive images are a couple techniques that make the best of retina displays.
+  - **Use:** Always using high-resolution images impact performance and HTML5's `srcset` attribute allows images to be responsive to different viewports.
+  - **Example:** `see below`
+  ```HTML
+  <div>
+    <img
+      src="/images/test-1600.jpg"
+      sizes="
+        (min-width: 768px) 50vw,
+        (min-width: 1024px) 66vw,
+        100vw"
+      srcset="
+        /images/test-400.jpg   400w,
+        /images/test-800.jpg   800w,
+        /images/test-1200.jpg 1200w
+      " />
+  </div>
+  ```
+  - **Source:** https://www.frontendinterviewhandbook.com/css-questions#have-you-ever-worked-with-retina-graphics-if-so-when-and-what-techniques-did-you-use
 - [X] Is there any reason you'd want to use `translate()` instead of `absolute` positioning, or vice-versa? And why?
   - **Explanation:** `translate()` has shorter paint times which allows for smoother animations, but occupies its original space. If you do not want the original space to be occupied, `absolute` positioning will trigger reflow.
   - **Use:** The `transform` property with a value of `translate()` uses a GPU layer for the element. The `position` property with a value of `absolute` triggers reflow and uses a CPU layer
