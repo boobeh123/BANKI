@@ -515,11 +515,19 @@ h1, h2, h3, h4, h5, h6 {
   - **Source:** https://learn.shayhowe.com/html-css/building-your-first-web-page/#using-css-resets
   - **Source2:** https://meyerweb.com/eric/tools/css/reset/
   - **Source3:** https://necolas.github.io/normalize.css/
-- [ ] How do you serve your pages for feature-constrained browsers? What techniques/processes do you use?
-  - **Explanation:**
-  - **Use:**
+- [X] How do you serve your pages for feature-constrained browsers? What techniques/processes do you use?
+  - **Explanation:** I have used `Modernizr` to detect CSS & JS features and `HTML5 Shiv` to serve HTML5 elements to version of Internet Explorer 8 & below. A couple processes that keep feature-constrained browsers in mind are Graceful degradation and Progressive enhancement.
+  - **Use:** Graceful degradation is the practice of building an application for a base level of user experience, but adding functional enhancements when a browser supports it. Progresive enhancement is the practice of building an application for modern browsers while ensuring it remains functional in older browsers.
   - **Example:**
-  - **Source:**
+  ```HTML
+  <!-- HTML5 Shiv conditional comment -->
+  <!--[if lt IE 9]>
+  <script src="html5shiv.js"></script>
+  <![endif]-->
+  ```
+  - **Source:** https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/
+  - **Source:** https://www.frontendinterviewhandbook.com/css-questions/
+  #how-do-you-serve-your-pages-for-feature-constrained-browsers-what-techniquesprocesses-do-you-use
 - [X] What are the different ways to visually hide content (and make it available only for screen readers)?
   - **Explanation:** Best practice is to use the global `hidden` boolean attribute, which is available to all elements for use. Another way is to use the `display` property with the `none` value, but it is semantically incorrect. 
   - **Use:** Screen readers will temporarily skip an element that uses the `hidden` attribute. This can be used to hide a success message until an action is completed.
