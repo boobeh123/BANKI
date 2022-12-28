@@ -549,11 +549,41 @@ h1, h2, h3, h4, h5, h6 {
   }
   ```
   - **Source:** https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/
-- [ ] Have you ever used a grid system, and if so, what do you prefer?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Have you ever used a grid system, and if so, what do you prefer?
+  - **Explanation:** Yes, I have used both a float-based grid system & flexbox. I prefer using flexbox over float-based grid systems, but I have used both to build web pages.
+  - **Use:** The `display` property with the `flex` property-value can be applied to a container which allows children elements to be rearranged.
+  - **Example:** `see below`
+  ```HTML
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="logo-container">
+          <img src="#" alt="logo-image" />
+          <span>Logo text</span>
+        </div>
+        <div class="link-container">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+      </nav>
+    </header>
+  </body>
+  ```
+  ```CSS
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo-container {
+      display: flex;
+      align-items: center;
+  }
+  .link-container a {
+      margin: 0 1rem;
+  }
+  ```
+  - **Source:** https://www.frontendinterviewhandbook.com/css-questions#have-you-ever-used-a-grid-system-and-if-so-what-do-you-prefer
 - [X] Have you used or implemented media queries or mobile specific layouts/CSS?
   - **Explanation:** I use media queries in every project I have built so far and I know about the mobile-first approach when building the layout.
   - **Use:** The mobile first approach includes using styles targeted at smaller viewports as the default styles for a website, then use media queries to add styles as the viewport grows.
