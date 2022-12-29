@@ -1080,11 +1080,26 @@ h1, h2, h3, h4, h5, h6 {
 
 ### Javascript
 
-- [ ] Explain event delegation
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Explain event delegation
+  - **Explanation:** Event delegation is a technique involving adding event listeners onto a parent element instead of a child element. 
+  - **Use:** A single handler is needed on a parent element instead of using several handlers on child elements.
+  - **Example:** `see below`
+  ```HTML
+  <body>
+    <div class="btn-container" onClick="greeting()">
+        <button type="button">Click any</button>
+        <button type="button">of these buttons</button>
+        <button type="button">for a greeting</button>
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+  ```
+  ```JavaScript
+  function greeting() {
+    alert('hello world');
+  }
+  ```
+  - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions#explain-event-delegation
 - [ ] Explain how `this` works in JavaScript
   - **Explanation:**
   - **Use:**
