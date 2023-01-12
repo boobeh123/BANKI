@@ -1100,11 +1100,27 @@ h1, h2, h3, h4, h5, h6 {
   }
   ```
   - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions#explain-event-delegation
-- [ ] Explain how `this` works in JavaScript
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Explain how `this` works in JavaScript
+  - **Explanation:**  `this` keyword is the determination of what value (usually an object) `this` points at is determined at runtime.
+  Each function has its own `this` binding, whose value depends on the way it is called and arrow functions do not bind their own `this`.
+  - **Use:** `this` keyword can be used to assign properties.
+  - **Example:** `see below`
+  ```JS
+  class Rabbit {
+    constructor(type) {
+      this.type = type;
+    }
+    speak(line) {
+      console.log(`The ${this.type} rabbit says '${line}'`)
+    }
+  }
+  let hungryRabbit = new Rabbit('hungry');
+
+  hungryRabbit.speak("I could use a carrot right now."); // Output -> The hungry rabbit says 'I could use a carrot right now.'
+  ```
+  - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+  - **Source:** https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/objects-classes/ch4.md
+  - **Source:** https://eloquentjavascript.net/06_object.html
 - [ ] Explain how prototypal inheritance works
   - **Explanation:**
   - **Use:**
