@@ -1121,13 +1121,25 @@ h1, h2, h3, h4, h5, h6 {
   - **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
   - **Source:** https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/objects-classes/ch4.md
   - **Source:** https://eloquentjavascript.net/06_object.html
-- [ ] Explain how prototypal inheritance works
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [X] Explain how prototypal inheritance works
+  - **Explanation:** Most objects have a prototype and a prototype is another object that is used as a fallback source of properties. 
+  When an object gets a request for a property that it does not have, its prototype will be searched for the property, then the prototype’s prototype until it it finds the property defined on one or until it reaches the end of the prototype chain.
+  - **Use:** The prototype acts as a container for the properties that are shared by all prototypes. I can use `object.create()` to create objects with specific prototypes.
+  - **Example:** `see below`
+  ```JavaScript
+  let protoRabbit = {
+    speak(string) {
+      console.log(`The ${this.type} rabbit says ${string}`);
+    }
+  }
+  let bouncyRabbit = Object.create(protoRabbit)
+  bouncyRabbit.type = "Bouncy";
+  bouncyRabbit.speak("booiiiinnnngg");  // Output -> The Bouncy rabbit says booiiiinnnngg
+  ```
+  - **Source:** https://eloquentjavascript.net/06_object.html#h_SumMlRB7yn
+  - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions#explain-how-prototypal-inheritance-works
 - [ ] What do you think of AMD vs CommonJS?
-  - **Explanation:**
+  - **Explanation:** 
   - **Use:**
   - **Example:**
   - **Source:**
